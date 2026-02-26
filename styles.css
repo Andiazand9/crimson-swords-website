@@ -1108,6 +1108,10 @@ img.team-photo {
         transform: translateX(0);
     }
 
+   .sponsor-tiers {
+       grid-template-columns: 1fr;
+   }
+
     .nav-links a {
         font-size: 1.5rem;
         color: var(--white);
