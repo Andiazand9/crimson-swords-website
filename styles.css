@@ -1024,6 +1024,10 @@ img.team-photo {
     .footer-content {
         grid-template-columns: 1fr 1fr;
     }
+   
+   .sponsor-tiers {
+    grid-template-columns: repeat(2, 1fr);
+   }
 
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
