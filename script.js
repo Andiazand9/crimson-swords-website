@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavbar();
     initMobileMenu();
     initScrollAnimations();
-    initContactForm();
     initSmoothScroll();
 });
 
