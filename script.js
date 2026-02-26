@@ -96,48 +96,6 @@ function initScrollAnimations() {
     animatedElements.forEach(el => observer.observe(el));
 }
 
-/* ========================================
-   Contact Form Handler
-   ======================================== */
-function initContactForm() {
-    const form = document.getElementById('contactForm');
-
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-        };
-
-        // Validate form
-        if (!formData.name || !formData.email || !formData.message) {
-            showNotification('Please fill in all fields.', 'error');
-            return;
-        }
-
-        if (!isValidEmail(formData.email)) {
-            showNotification('Please enter a valid email address.', 'error');
-            return;
-        }
-
-        // Simulate form submission
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-
-        setTimeout(function() {
-            showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
-            form.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 1500);
-    });
-}
 
 /* ========================================
    Smooth Scroll for Anchor Links
