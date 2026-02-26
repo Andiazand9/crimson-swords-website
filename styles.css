@@ -714,6 +714,10 @@ img.team-photo {
     background: #8B4513;
 }
 
+.tier-card.diamond::before {
+    background: linear-gradient(90deg, #a8d8f0, #6ab4e8, #a8d8f0);
+}
+
 .tier-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
