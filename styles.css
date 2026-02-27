@@ -64,13 +64,41 @@ img {
     margin: 0 auto;
     padding: 0 40px;
 }
+/* Ticker Bar */
+.ticker-bar {
+    background: var(--crimson);
+    overflow: hidden;
+    padding: 10px 0;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1001;
+}
+
+.ticker-track {
+    display: inline-flex;
+    gap: 60px;
+    animation: ticker 20s linear infinite;
+}
+
+.ticker-track span {
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+@keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
 
 /* ========================================
    Navigation
    ======================================== */
 .navbar {
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     right: 0;
     background: transparent;
