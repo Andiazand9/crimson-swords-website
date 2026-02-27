@@ -185,215 +185,190 @@ img {
 }
 
 /* ========================================
-   Hero Section
+   Hero Section - REDESIGNED
    ======================================== */
 .hero {
     min-height: 100vh;
-    background: var(--crimson);
+    background: var(--black);
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
+    padding: 0;
 }
 
+/* Full-screen background image */
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('IMG_2635.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transform: scale(1.05);
+    animation: heroZoom 12s ease infinite alternate;
+}
+
+@keyframes heroZoom {
+    from { transform: scale(1.05); }
+    to { transform: scale(1.12); }
+}
+
+/* Dark overlay over photo */
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.55) 0%,
+        rgba(139,0,0,0.35) 50%,
+        rgba(0,0,0,0.85) 100%
+    );
+}
+
+/* Diagonal red slash accent */
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background: var(--crimson-dark);
-    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 200px;
-    background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(178,34,34,0.15) 0%,
+        transparent 50%
+    );
+    z-index: 1;
+    pointer-events: none;
 }
 
 .hero-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px 0 80px;
-    gap: 120px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 40px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 0;
+}
+
+/* Hide the old side image - we use it as bg now */
+.hero-image {
+    display: none;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
+    width: 100%;
     text-align: center;
     color: var(--white);
-    max-width: 600px;
-    flex: 1;
 }
 
-.hero-image {
-    flex: 0 0 650px;
-    max-width: 650px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 0.8s ease 0.4s both;
-    margin-right: -40px;
-}
-
-.hero-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+.hero-logo {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 32px;
+    animation: fadeInDown 0.8s ease both;
+    filter: drop-shadow(0 4px 20px rgba(0,0,0,0.6));
 }
 
 .hero-badge {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(178,34,34,0.8);
+    border: 1px solid rgba(255,255,255,0.25);
     color: var(--white);
     padding: 8px 20px;
-    border-radius: 0;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-bottom: 30px;
-    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    animation: fadeInDown 0.8s ease;
+    animation: fadeInDown 0.8s ease 0.1s both;
 }
 
 .hero h1 {
-    font-size: 4.5rem;
-    font-weight: 700;
-    margin-bottom: 24px;
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-    animation: fadeInUp 0.8s ease 0.2s both;
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
     color: var(--white);
+    margin-bottom: 28px;
+    animation: fadeInUp 0.8s ease 0.2s both;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.5);
 }
 
 .hero h1 span {
-    color: var(--white);
-    text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+    color: var(--crimson);
+    display: block;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.1);
 }
 
 .hero-tagline {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 20px;
-    font-weight: 400;
-    animation: fadeInUp 0.8s ease 0.4s both;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    animation: fadeInUp 0.8s ease 0.3s both;
 }
 
 .hero-description {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 40px;
-    max-width: 500px;
-    line-height: 1.8;
-    animation: fadeInUp 0.8s ease 0.6s both;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 560px;
+    margin: 0 auto 48px;
+    line-height: 1.9;
+    animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+/* Divider line before buttons */
+.hero-content::before {
+    display: none;
 }
 
 .hero-buttons {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
-    animation: fadeInUp 0.8s ease 0.8s both;
-    justify-content: center; 
+    justify-content: center;
+    animation: fadeInUp 0.8s ease 0.5s both;
 }
 
-/* ========================================
-   Buttons
-   ======================================== */
-.btn {
-    display: inline-block;
-    padding: 16px 32px;
-    border-radius: 0;
-    font-weight: 600;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: var(--transition);
-    border: none;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-.btn-primary {
-    background: var(--black);
-    color: var(--white);
-}
-
-.btn-primary:hover {
-    background: var(--white);
-    color: var(--crimson);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-red);
-}
-
-.btn-secondary {
-    background: var(--crimson);
-    color: var(--white);
-    border: 2px solid var(--white);
-}
-
-.btn-secondary:hover {
-    background: var(--white);
-    color: var(--crimson);
-    transform: translateY(-2px);
-}
-
-/* ========================================
-   Page Header (for inner pages)
-   ======================================== */
-.page-header {
-    background: var(--crimson);
-    padding: 180px 0 100px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.page-header::before {
-    content: '';
+/* Scroll indicator */
+.hero-scroll {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 40%;
-    height: 100%;
-    background: var(--crimson-dark);
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: fadeInUp 1s ease 1s both;
 }
 
-.page-header h1 {
-    font-size: 3.5rem;
-    color: var(--white);
-    margin-bottom: 20px;
-    letter-spacing: -0.02em;
-    font-weight: 700;
-    position: relative;
+.hero-scroll::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+    animation: scrollPulse 2s ease infinite;
 }
 
-.page-header h1 span {
-    color: var(--white);
-    opacity: 0.9;
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
 }
-
-.page-header p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.1rem;
-    max-width: 500px;
-    margin: 0 auto;
-    position: relative;
-}
-
 /* ========================================
    Sections
    ======================================== */
