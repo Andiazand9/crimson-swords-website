@@ -1349,13 +1349,24 @@ img.team-photo {
     overflow: hidden;
 }
 
-    .page-header h1 {
-        font-size: 2rem;
-    }
+   .page-header h1 {
+    font-size: 3.5rem;
+    color: var(--white);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
 
-    .page-header p {
-        font-size: 1rem;
-    }
+.page-header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
 
     .page-header::before {
         width: 100%;
