@@ -112,6 +112,10 @@ img {
     background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
 }
+.navbar-dark {
+    background: rgba(0, 0, 0, 0.92) !important;
+    backdrop-filter: blur(10px);
+}
 
 .navbar .container {
     display: flex;
@@ -504,7 +508,7 @@ img {
    ======================================== */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 40px;
     text-align: center;
 }
@@ -1132,17 +1136,7 @@ img.team-photo {
     transform: scale(1.08);
 }
 
-/* Red left border flash on team cards */
-.team-card::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 4px;
-    height: 0;
-    background: var(--crimson);
-    transition: height 0.4s ease;
-}
+
 
 .team-card {
     position: relative;
@@ -1347,9 +1341,13 @@ img.team-photo {
         aspect-ratio: 16/9;
     }
 
-    .page-header {
-        padding: 120px 0 60px;
-    }
+   .page-header {
+    background: var(--crimson);
+    padding: 200px 0 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
 
     .page-header h1 {
         font-size: 2rem;
@@ -1370,9 +1368,9 @@ img.team-photo {
     }
 
     .team-photo {
-        height: 280px;
-    }
-
+    width: 120px;
+    height: 120px;
+}
     .footer {
         padding: 60px 0 30px;
     }
