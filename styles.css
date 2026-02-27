@@ -315,7 +315,7 @@ body:not(:has(.hero)) .navbar {
     left: 0;
     right: 0;
     height: 80px;
-    background: var(--off-white);
+    background: var(--black);
     clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%);
     z-index: 1;
 }
