@@ -1017,6 +1017,28 @@ img.team-photo {
     opacity: 1;
     transform: translateY(0);
 }
+.cta-section {
+    background: var(--black);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, var(--crimson-dark) 0%, transparent 60%);
+    opacity: 0.4;
+}
+
+.cta-section .section-title h2 {
+    color: var(--white);
+}
+
+.cta-section .section-title p {
+    color: rgba(255, 255, 255, 0.7);
+}
 
 /* ========================================
    Responsive Design
