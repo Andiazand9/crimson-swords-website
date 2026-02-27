@@ -70,8 +70,12 @@ img {
     overflow: hidden;
     padding: 10px 0;
     white-space: nowrap;
-    position: relative;
-    z-index: 1001;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1002;
+    height: 36px;
 }
 
 .ticker-track {
@@ -98,14 +102,13 @@ img {
    ======================================== */
 .navbar {
     position: fixed;
-    top: 40px;
+    top: 36px;
     left: 0;
     right: 0;
     background: transparent;
     padding: 20px 0;
     z-index: 1000;
     transition: var(--transition);
-    border-bottom: none;
 }
 
 .navbar.scrolled {
@@ -1343,7 +1346,7 @@ img.team-photo {
 
    .page-header {
     background: var(--crimson);
-    padding: 200px 0 100px;
+    padding: 220px 0 100px;
     text-align: center;
     position: relative;
     overflow: hidden;
