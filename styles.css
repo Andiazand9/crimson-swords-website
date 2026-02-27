@@ -656,6 +656,33 @@ img.team-photo {
     border: 1px solid rgba(0, 0, 0, 0.06);
     transition: var(--transition);
     min-height: 160px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sponsor-card::after {
+    content: 'VISIT SITE →';
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    background: var(--crimson);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    transition: var(--transition);
+}
+
+.sponsor-card:hover::after {
+    bottom: 0;
+}
+
+.sponsor-tiers .tier-card {
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 92% 100%, 0 100%);
 }
 
 .sponsor-card:hover {
@@ -1119,6 +1146,10 @@ img.team-photo {
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
+    }
+       .what-is-stem-grid {
+        grid-template-columns: 1fr;
+       }
     }
 
     .nav-links {
