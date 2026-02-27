@@ -87,24 +87,34 @@ img {
 
 .navbar .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    display: none;
+    display: flex;
+    align-item: center;
+    gap: 10px;
+    text-decoration: none;
 }
 
 .logo-icon {
-    display: none;
+    display: block;
+    font-size: 1.4rem;
 }
 
 .logo-text {
-    display: none;
+    display: block;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
 }
 
 .logo-text span {
-    display: none;
+    display: inline;
+    color: rgba(255,255,255,0.7);
 }
 
 .nav-links {
@@ -916,7 +926,7 @@ img.team-photo {
 
 .social-link svg {
    color: var(--white);
-   fill: var (--white);
+   fill: var(--white);
 }
 
 /* ========================================
@@ -1149,7 +1159,7 @@ img.team-photo {
     }
        .what-is-stem-grid {
         grid-template-columns: 1fr;
-       }
+       
     }
 
     .nav-links {
