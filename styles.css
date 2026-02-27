@@ -36,10 +36,10 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.7;
     color: var(--black);
-    background-color: var(--white);
+    background-color: var(--black);
     font-weight: 400;
     letter-spacing: -0.01em;
 }
@@ -1350,6 +1350,7 @@ img.team-photo {
     text-align: center;
     position: relative;
     overflow: hidden;
+    isolation: isolate;
 }
 
    .page-header h1 {
@@ -1372,10 +1373,16 @@ img.team-photo {
 }
 
     .page-header::before {
-        width: 100%;
-        clip-path: none;
-        opacity: 0.5;
-    }
+        content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: var(--crimson-dark);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 0;
+}
 
     .team-grid {
         gap: 24px;
