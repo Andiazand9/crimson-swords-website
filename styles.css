@@ -208,6 +208,12 @@ body:not(:has(.hero)) .navbar {
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
+.logo-img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
 
 .logo-text span {
     display: inline;
