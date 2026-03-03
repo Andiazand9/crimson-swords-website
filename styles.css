@@ -1529,34 +1529,3 @@ img.team-photo {
     color: var(--crimson);
 }
 
-/* Dark Mode toggle button */
-.dark-mode-toggle {
-    display: inline-block;
-    margin-top: 16px;
-    padding: 10px 22px;
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.25);
-    color: var(--gray);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: var(--transition);
-    font-family: inherit;
-}
-
-.dark-mode-toggle:hover {
-    border-color: var(--crimson);
-    color: var(--crimson);
-}
-
-:root.light-mode .dark-mode-toggle {
-    border-color: rgba(0,0,0,0.2);
-    color: #666666;
-}
-
-:root.light-mode .dark-mode-toggle:hover {
-    border-color: var(--crimson);
-    color: var(--crimson);
-}
