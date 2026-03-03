@@ -11,9 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initDarkMode();
 });
 
-/* ========================================
-   Dark Mode Toggle
-   ======================================== */
 function initDarkMode() {
     const saved = localStorage.getItem('colorMode');
     const isDark = saved ? saved === 'dark' : true;
@@ -41,9 +38,6 @@ function applyMode(dark) {
     });
 }
 
-/* ========================================
-   Navbar Scroll Effect
-   ======================================== */
 function initNavbar() {
     const navbar = document.querySelector('.navbar');
     if (!navbar) return;
@@ -66,9 +60,6 @@ function initNavbar() {
     });
 }
 
-/* ========================================
-   Mobile Menu Toggle
-   ======================================== */
 function initMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -94,17 +85,9 @@ function initMobileMenu() {
     });
 }
 
-/* ========================================
-   Scroll Animations
-   ======================================== */
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     if (animatedElements.length === 0) return;
-
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
 
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
@@ -113,14 +96,11 @@ function initScrollAnimations() {
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
     animatedElements.forEach(el => observer.observe(el));
 }
 
-/* ========================================
-   Smooth Scroll for Anchor Links
-   ======================================== */
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -130,24 +110,19 @@ function initSmoothScroll() {
             if (targetElement) {
                 e.preventDefault();
                 const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = targetElement.offsetTop - navbarHeight;
-                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                window.scrollTo({ top: targetElement.offsetTop - navbarHeight, behavior: 'smooth' });
             }
         });
     });
 }
 
-/* ========================================
-   Utility Functions
-   ======================================== */
 function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 function showNotification(message, type) {
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) existingNotification.remove();
+    const existing = document.querySelector('.notification');
+    if (existing) existing.remove();
 
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
@@ -158,10 +133,9 @@ function showNotification(message, type) {
         padding: '15px 25px', borderRadius: '10px', color: '#fff',
         fontWeight: '500', display: 'flex', alignItems: 'center',
         gap: '15px', zIndex: '9999', animation: 'slideIn 0.3s ease',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)'
+        boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
+        background: type === 'success' ? '#28a745' : '#dc3545'
     });
-
-    notification.style.background = type === 'success' ? '#28a745' : '#dc3545';
 
     if (!document.querySelector('#notification-styles')) {
         const style = document.createElement('style');
@@ -174,8 +148,8 @@ function showNotification(message, type) {
     }
 
     document.body.appendChild(notification);
-    notification.querySelector('.notification-close').addEventListener('click', function() { closeNotification(notification); });
-    setTimeout(function() { closeNotification(notification); }, 5000);
+    notification.querySelector('.notification-close').addEventListener('click', () => closeNotification(notification));
+    setTimeout(() => closeNotification(notification), 5000);
 }
 
 function closeNotification(notification) {
@@ -187,29 +161,24 @@ function closeNotification(notification) {
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
     const increment = target / (duration / 16);
-    function updateCounter() {
+    function update() {
         start += increment;
-        if (start < target) {
-            element.textContent = Math.floor(start);
-            requestAnimationFrame(updateCounter);
-        } else {
-            element.textContent = target;
-        }
+        if (start < target) { element.textContent = Math.floor(start); requestAnimationFrame(update); }
+        else { element.textContent = target; }
     }
-    updateCounter();
+    update();
 }
 
 function initCounters() {
     const counters = document.querySelectorAll('[data-counter]');
-    if (counters.length === 0) return;
-    const observer = new IntersectionObserver(function(entries) {
+    if (!counters.length) return;
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const target = parseInt(entry.target.dataset.counter);
-                animateCounter(entry.target, target);
+                animateCounter(entry.target, parseInt(entry.target.dataset.counter));
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 });
-    counters.forEach(counter => observer.observe(counter));
+    counters.forEach(c => observer.observe(c));
 }
