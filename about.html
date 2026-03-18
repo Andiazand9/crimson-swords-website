@@ -10,22 +10,6 @@
 </head>
 <body>
 
-    <!-- Ticker Bar -->
-    <div class="ticker-bar">
-        <div class="ticker-track">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar scrolled">
         <div class="container">
@@ -63,7 +47,7 @@
                 <h2>Our <span>Team</span></h2>
                 <p>The dedicated individuals who make Crimson Swords a success.</p>
             </div>
-            <div class="team-grid">
+            <div class="team-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
                 <div class="team-card animate-on-scroll">
                     <img src="image+(2).jpg" alt="Jake Felkai" class="team-photo">
                     <div class="team-info">
@@ -134,21 +118,18 @@
                         <p class="team-role">Sub Member</p>
                     </div>
                 </div>
-                <!-- Nicholas and Bradley centered in last row -->
-                <div style="grid-column: 1 / -1; display: flex; justify-content: center; gap: 40px;">
-                    <div class="team-card animate-on-scroll">
-                        <img src="Bridgit.png" alt="Bridgit Hayward" class="team-photo">
-                        <div class="team-info">
-                            <h3>Bridgit Hayward</h3>
-                            <p class="team-role">Sub Member</p>
-                        </div>
+                <div class="team-card animate-on-scroll">
+                    <img src="Bridgit.png" alt="Bridgit Hayward" class="team-photo">
+                    <div class="team-info">
+                        <h3>Bridgit Hayward</h3>
+                        <p class="team-role">Sub Member</p>
                     </div>
-                    <div class="team-card animate-on-scroll">
-                        <img src="Bradley.png" alt="Bradley Wong" class="team-photo">
-                        <div class="team-info">
-                            <h3>Bradley Wong</h3>
-                            <p class="team-role">Sub Member</p>
-                        </div>
+                </div>
+                <div class="team-card animate-on-scroll">
+                    <img src="Bradley.png" alt="Bradley Wong" class="team-photo">
+                    <div class="team-info">
+                        <h3>Bradley Wong</h3>
+                        <p class="team-role">Sub Member</p>
                     </div>
                 </div>
             </div>
