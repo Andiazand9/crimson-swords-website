@@ -57,13 +57,18 @@
     </header>
 
     <!-- Team Members Section -->
+
     <section class="section section-dark">
         <div class="container">
             <div class="section-title animate-on-scroll">
                 <h2>Our <span>Team</span></h2>
                 <p>The dedicated individuals who make Crimson Swords a success.</p>
             </div>
-            <div class="team-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+            <div class="team-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1100px; margin: 0 auto;">
+                <style>
+                    .team-card { width: 100% !important; max-width: 100% !important; }
+                    .team-photo { width: 100% !important; height: 320px !important; object-fit: cover !important; }
+                </style>
                 <div class="team-card animate-on-scroll">
                     <img src="image+(2).jpg" alt="Jake Felkai" class="team-photo">
                     <div class="team-info">
@@ -151,7 +156,7 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Join CTA -->
     <section class="section cta-section">
         <div class="container">
