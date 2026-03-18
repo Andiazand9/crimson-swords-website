@@ -40,11 +40,9 @@ body {
     background-color: var(--black);
     font-weight: 400;
     letter-spacing: -0.01em;
-    /* Push content below fixed ticker + navbar */
     padding-top: calc(var(--ticker-height) + var(--navbar-height));
 }
 
-/* Hero page doesn't need top padding since it's full-screen */
 body:has(.hero) {
     padding-top: 0;
 }
@@ -173,7 +171,6 @@ img {
     box-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
 
-/* On non-hero pages, navbar should always be dark */
 .page-header ~ .navbar,
 body:not(:has(.hero)) .navbar {
     background: rgba(0, 0, 0, 0.95);
@@ -371,7 +368,7 @@ body:not(:has(.hero)) .navbar {
 .hero-bg {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url('IMG_2635.jpg');
+    background-image: url('DSCF1233.JPG');
     background-size: cover;
     background-position: center;
     z-index: 0;
@@ -528,7 +525,6 @@ body:not(:has(.hero)) .navbar {
     line-height: 1.8;
 }
 
-/* Dark section overrides */
 .cta-section .section-title h2,
 .footer .section-title h2 {
     color: var(--white);
@@ -693,7 +689,6 @@ img.team-photo {
     display: block;
 }
 
-/* Team card with no/empty photo: show placeholder */
 .team-photo-placeholder {
     width: 140px;
     height: 140px;
@@ -863,7 +858,6 @@ img.team-photo {
     transform: scale(1.08);
 }
 
-/* Sponsor Tiers */
 .sponsor-tiers {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1407,134 +1401,10 @@ img.team-photo {
         grid-template-columns: 1fr !important;
     }
 }
+
 /* ========================================
-   Light Mode (default on load unless dark saved)
+   Light Mode
    ======================================== */
-
-:root.light-mode {
-    --black: #FFFFFF;
-    --black-soft: #F5F5F5;
-    --white: #111111;
-    --off-white: #F0F0F0;
-    --gray-light: #E8E8E8;
-    --gray: #666666;
-    --gray-dark: #222222;
-    --shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-}
-
-:root.light-mode body {
-    background-color: #FFFFFF;
-    color: #111111;
-}
-
-:root.light-mode .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.96);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.12);
-}
-
-:root.light-mode .nav-links a {
-    color: #111111;
-}
-
-:root.light-mode .logo-text {
-    color: #111111;
-}
-
-:root.light-mode .hamburger span {
-    background: #111111;
-}
-
-:root.light-mode .hero-bg::after {
-    background: linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.3) 0%,
-        rgba(200,50,50,0.25) 50%,
-        rgba(255,255,255,0.7) 100%
-    );
-}
-
-:root.light-mode .section-dark {
-    background: #F0F0F0;
-}
-
-:root.light-mode .cta-section {
-    background: #EFEFEF;
-}
-
-:root.light-mode .cta-section::before {
-    opacity: 0.15;
-}
-
-:root.light-mode .cta-section .section-title h2 {
-    color: #111111;
-}
-
-:root.light-mode .cta-section .section-title p {
-    color: #555555;
-}
-
-:root.light-mode .feature-card {
-    background: #FFFFFF;
-    border-color: rgba(0,0,0,0.1);
-}
-
-:root.light-mode .feature-card h3 {
-    color: #111111;
-}
-
-:root.light-mode .team-info h3 {
-    color: #111111;
-}
-
-:root.light-mode .tier-card {
-    background: #FFFFFF;
-    border-color: rgba(0,0,0,0.08);
-}
-
-:root.light-mode .tier-name {
-    color: #111111;
-}
-
-:root.light-mode .tier-benefits li {
-    color: #333333;
-    border-bottom-color: #E8E8E8;
-}
-
-:root.light-mode .contact-form {
-    background: #FFFFFF;
-    border-color: rgba(0,0,0,0.08);
-}
-
-:root.light-mode .contact-info h3 {
-    color: #111111;
-}
-
-:root.light-mode .form-group label {
-    color: #111111;
-}
-
-:root.light-mode .form-group input,
-:root.light-mode .form-group textarea {
-    background: #FFFFFF;
-    border-color: rgba(0,0,0,0.15);
-    color: #111111;
-}
-
-:root.light-mode .footer {
-    background: #1a1a1a;
-}
-
-:root.light-mode .gallery-item {
-    background: #E8E8E8;
-}
-
-:root.light-mode .section-title h2 {
-    color: var(--crimson);
-}
-/* ========================================
-   Light Mode (default on load unless dark saved)
-   ======================================== */
-
 :root.light-mode {
     --black: #FFFFFF;
     --black-soft: #F5F5F5;
@@ -1687,4 +1557,3 @@ img.team-photo {
     border-color: var(--crimson);
     color: var(--crimson);
 }
-
