@@ -18,9 +18,103 @@
 
         .what-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            grid-template-columns: 1fr;
+            gap: 0;
             align-items: start;
+        }
+
+        .what-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            margin-top: 60px;
+        }
+
+        .what-row {
+            display: grid;
+            grid-template-columns: 420px 1fr;
+            gap: 0;
+            min-height: 280px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .what-row:hover { transform: translateY(-3px); }
+
+        .what-row-photo {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .what-row-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+            filter: brightness(0.85);
+        }
+
+        .what-row:hover .what-row-photo img {
+            transform: scale(1.04);
+        }
+
+        .what-row-num {
+            position: absolute;
+            top: 16px; left: 20px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.12);
+            line-height: 1;
+            letter-spacing: -0.04em;
+            pointer-events: none;
+        }
+
+        .what-row-text {
+            background: var(--white);
+            padding: 48px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-left: 3px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .what-row:hover .what-row-text {
+            border-left-color: var(--crimson);
+        }
+
+        .what-row-tag {
+            display: inline-block;
+            background: var(--crimson);
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            margin-bottom: 16px;
+            align-self: flex-start;
+        }
+
+        .what-row-text h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 14px;
+            letter-spacing: 0.01em;
+            line-height: 1;
+        }
+
+        .what-row-text p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin: 0;
         }
 
         .what-text h2 {
@@ -571,8 +665,9 @@
         @media (max-width: 768px) {
             .stem-hero h1 { font-size: 4rem; }
             .stem-hero::after { display: none; }
-            .what-grid { grid-template-columns: 1fr; gap: 48px; }
-            .what-pillars { grid-template-columns: 1fr 1fr; }
+            .what-grid { grid-template-columns: 1fr; gap: 0; }
+            .what-row { grid-template-columns: 1fr; min-height: auto; }
+            .what-row-photo { height: 220px; }
             .stages { grid-template-columns: 1fr; }
             .judging { grid-template-columns: repeat(2, 1fr); }
             .awards-grid { grid-template-columns: 1fr; }
@@ -583,7 +678,6 @@
         }
 
         @media (max-width: 480px) {
-            .what-pillars { grid-template-columns: 1fr; }
             .stem-hero h1 { font-size: 3rem; }
         }
     </style>
@@ -640,7 +734,7 @@
                     <span class="sph-dot"></span>
                     Endorsed by Formula 1
                     <span class="sph-dot"></span>
-                    30+ Countries
+                    60+ Countries
                     <span class="sph-dot"></span>
                     Ages 9–19
                 </div>
@@ -670,7 +764,7 @@
                     </div>
                     <div class="sph-divider"></div>
                     <div class="sph-stat">
-                        <div class="sph-stat-num">30<span style="font-size:2rem">+</span></div>
+                        <div class="sph-stat-num">60<span style="font-size:2rem">+</span></div>
                         <div class="sph-stat-unit"></div>
                         <div class="sph-stat-label">Countries Competing</div>
                     </div>
@@ -975,37 +1069,47 @@
                     <p>Endorsed by Formula 1 and run in over 30 countries, it's one of the most complete STEM challenges available to high school students anywhere in the world.</p>
                     <a href="https://www.stemracing.ca/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top:8px;">Visit STEM Racing ↗</a>
                 </div>
-                <div class="what-pillars animate-on-scroll">
-                    <div class="pillar">
-                        <span class="pillar-icon">📐</span>
-                        <h4>CAD Design</h4>
-                        <p>Teams use professional 3D software to design aerodynamic car bodies, optimising every curve for speed.</p>
+                <div class="what-rows animate-on-scroll">
+
+                    <!-- Row 1: Engineering -->
+                    <div class="what-row">
+                        <div class="what-row-photo">
+                            <img src="DSCF1894.JPEG" alt="Engineering">
+                            <div class="what-row-num">01</div>
+                        </div>
+                        <div class="what-row-text">
+                            <span class="what-row-tag">Engineering</span>
+                            <h4>Design &amp; Engineering</h4>
+                            <p>Teams use industry-standard CAD software to design aerodynamic car bodies, running CFD simulations to optimise every surface for drag and downforce. Every gram and every millimetre matters — cars are engineered to hit speeds up to 100 km/h over a 20-metre track powered by a CO₂ cartridge.</p>
+                        </div>
                     </div>
-                    <div class="pillar">
-                        <span class="pillar-icon">🏭</span>
-                        <h4>Manufacturing</h4>
-                        <p>Cars are CNC-machined from a balsa wood block to fractions of a millimetre precision.</p>
+
+                    <!-- Row 2: Manufacturing -->
+                    <div class="what-row">
+                        <div class="what-row-photo">
+                            <img src="DSCF1918.JPEG" alt="Manufacturing">
+                            <div class="what-row-num">02</div>
+                        </div>
+                        <div class="what-row-text">
+                            <span class="what-row-tag">Manufacturing</span>
+                            <h4>Precision Manufacturing</h4>
+                            <p>From digital model to physical car, teams use CNC machines to carve their designs from balsa wood blocks to fractions of a millimetre. The manufacturing process demands precision, patience, and a deep understanding of materials — skills straight from real-world production floors.</p>
+                        </div>
                     </div>
-                    <div class="pillar">
-                        <span class="pillar-icon">📊</span>
-                        <h4>Engineering</h4>
-                        <p>Teams analyse drag, thrust, and mass to push their car's performance to the theoretical limit.</p>
+
+                    <!-- Row 3: Marketing -->
+                    <div class="what-row">
+                        <div class="what-row-photo">
+                            <img src="DSCF2475.JPEG" alt="Marketing">
+                            <div class="what-row-num">03</div>
+                        </div>
+                        <div class="what-row-text">
+                            <span class="what-row-tag">Marketing</span>
+                            <h4>Branding &amp; Marketing</h4>
+                            <p>STEM Racing isn't just about speed — teams build a full brand identity, secure real sponsorships, and present a professional portfolio to industry judges. From livery design to verbal presentations and pit displays, marketing is a scored and critical part of every competition.</p>
+                        </div>
                     </div>
-                    <div class="pillar">
-                        <span class="pillar-icon">🎨</span>
-                        <h4>Branding</h4>
-                        <p>From team identity and livery to sponsorship portfolios, marketing is a scored part of competition.</p>
-                    </div>
-                    <div class="pillar">
-                        <span class="pillar-icon">🗣️</span>
-                        <h4>Presentation</h4>
-                        <p>Teams present to a panel of industry judges, defending every design decision made.</p>
-                    </div>
-                    <div class="pillar">
-                        <span class="pillar-icon">🏁</span>
-                        <h4>Racing</h4>
-                        <p>Cars race head-to-head down a 20-metre track powered by a CO₂ cartridge, hitting speeds up to 100 km/h.</p>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -1211,15 +1315,8 @@
                 <div class="footer-section">
                     <h4>Contact Us</h4>
                     <p>Northern Secondary School</p>
-                    <a href="mailto:nsscrimsonswords@gmail.com" style="color:var(--crimson); font-size:0.9rem;">nsscrimsonswords@gmail.com</a>
+                    <a href="/cdn-cgi/l/email-protection#a4cad7d7c7d6cdc9d7cbcad7d3cbd6c0d7e4c3c9c5cdc88ac7cbc9" style="color:var(--crimson); font-size:0.9rem;"><span class="__cf_email__" data-cfemail="38564b4b5b4a51554b57564b4f574a5c4b785f55595154165b5755">[email&#160;protected]</span></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Crimson Swords Racing Team. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                <p>&copy; 2026 Crimso
