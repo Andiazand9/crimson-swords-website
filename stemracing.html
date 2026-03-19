@@ -7,111 +7,8 @@
     <title>STEM Racing | Crimson Swords Racing Team</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <style>
         /* ── Page-specific styles ── */
-
-        /* ── HERO ── */
-        .stem-hero {
-            background: var(--black);
-            padding: 160px 0 100px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stem-hero::before {
-            content: '';
-            position: absolute;
-            top: -100px; right: -200px;
-            width: 700px; height: 700px;
-            background: radial-gradient(circle, rgba(178,34,34,0.18) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .stem-hero::after {
-            content: 'F1';
-            position: absolute;
-            right: -20px; top: 50%;
-            transform: translateY(-50%);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 28rem;
-            font-weight: 900;
-            color: rgba(255,255,255,0.025);
-            line-height: 1;
-            pointer-events: none;
-            user-select: none;
-        }
-
-        .stem-hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .stem-hero-eyebrow {
-            display: inline-block;
-            background: var(--crimson);
-            color: white;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            padding: 6px 16px;
-            margin-bottom: 28px;
-        }
-
-        .stem-hero h1 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 7rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            line-height: 0.9;
-            letter-spacing: -0.02em;
-            color: var(--white);
-            margin-bottom: 32px;
-        }
-
-        .stem-hero h1 span {
-            color: var(--crimson);
-        }
-
-        .stem-hero-desc {
-            color: rgba(255,255,255,0.65);
-            font-size: 1.1rem;
-            max-width: 560px;
-            line-height: 1.9;
-            margin-bottom: 48px;
-        }
-
-        .stem-hero-stats {
-            display: flex;
-            gap: 60px;
-            flex-wrap: wrap;
-        }
-
-        .stem-stat {
-            border-left: 3px solid var(--crimson);
-            padding-left: 20px;
-        }
-
-        .stem-stat-num {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--white);
-            line-height: 1;
-            letter-spacing: -0.02em;
-        }
-
-        .stem-stat-label {
-            font-size: 0.72rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--gray);
-            margin-top: 4px;
-        }
 
         /* ── WHAT IS STEM RACING ── */
         .what-section {
@@ -722,32 +619,13 @@
         </div>
     </nav>
 
-    <!-- ── HERO ── -->
-    <section class="stem-hero">
+    <!-- Page Header -->
+    <header class="page-header">
         <div class="container">
-            <div class="animate-on-scroll">
-                <span class="stem-hero-eyebrow">The Competition</span>
-                <h1>STEM<br><span>Racing</span></h1>
-                <p class="stem-hero-desc">
-                    Where engineering meets motorsport. Students design, build, and race CO₂-powered cars — pushing the limits of physics, creativity, and teamwork on the international stage.
-                </p>
-                <div class="stem-hero-stats">
-                    <div class="stem-stat">
-                        <div class="stem-stat-num">9–19</div>
-                        <div class="stem-stat-label">Student Age Range</div>
-                    </div>
-                    <div class="stem-stat">
-                        <div class="stem-stat-num">30+</div>
-                        <div class="stem-stat-label">Countries Competing</div>
-                    </div>
-                    <div class="stem-stat">
-                        <div class="stem-stat-num">F1</div>
-                        <div class="stem-stat-label">Endorsed Program</div>
-                    </div>
-                </div>
-            </div>
+            <h1>STEM <span>Racing</span></h1>
+            <p>Where engineering meets motorsport. Students design, build, and race CO₂-powered cars — competing from regional qualifiers all the way to the World Finals.</p>
         </div>
-    </section>
+    </header>
 
     <!-- ── WHAT IS STEM RACING ── -->
     <section class="what-section" id="what">
@@ -995,15 +873,8 @@
                 <div class="footer-section">
                     <h4>Contact Us</h4>
                     <p>Northern Secondary School</p>
-                    <a href="mailto:nsscrimsonswords@gmail.com" style="color:var(--crimson); font-size:0.9rem;">nsscrimsonswords@gmail.com</a>
+                    <a href="/cdn-cgi/l/email-protection#8de3fefeeeffe4e0fee2e3fefae2ffe9fecdeae0ece4e1a3eee2e0" style="color:var(--crimson); font-size:0.9rem;"><span class="__cf_email__" data-cfemail="c1afb2b2a2b3a8acb2aeafb2b6aeb3a5b281a6aca0a8adefa2aeac">[email&#160;protected]</span></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Crimson Swords Racing Team. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                <p>&copy; 2026 Crimson
