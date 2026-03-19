@@ -7,22 +7,88 @@
     <title>About Us | Crimson Swords Racing Team</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        .team-grid-6 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-card-6 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card-6:hover {
+            transform: translateY(-6px);
+        }
+
+        .team-photo-6 {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+            border: 3px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .team-card-6:hover .team-photo-6 {
+            border-color: var(--crimson);
+        }
+
+        .team-info-6 {
+            padding: 12px 4px 0;
+            width: 100%;
+        }
+
+        .team-info-6 h3 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 3px;
+            color: var(--black);
+            line-height: 1.3;
+        }
+
+        .team-role-6 {
+            color: var(--crimson);
+            font-weight: 600;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        .team-funfact-6 {
+            color: var(--gray);
+            font-size: 0.72rem;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        @media (max-width: 1024px) {
+            .team-grid-6 { grid-template-columns: repeat(4, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .team-grid-6 { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        }
+        @media (max-width: 400px) {
+            .team-grid-6 { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Ticker Bar -->
-      <div class="ticker-bar">
+    <!-- Ticker Bar -->
+    <div class="ticker-bar">
         <div class="ticker-track">
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            <span>  </span>
-            <span> </span>
-            <span> </span>
+            <span> </span><span> </span><span> </span><span> </span><span> </span>
+            <span> </span><span> </span><span>  </span><span> </span><span> </span>
         </div>
     </div>
 
@@ -41,9 +107,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
@@ -57,106 +121,127 @@
     </header>
 
     <!-- Team Members Section -->
-
     <section class="section section-dark">
         <div class="container">
             <div class="section-title animate-on-scroll">
                 <h2>Our <span>Team</span></h2>
                 <p>The dedicated individuals who make Crimson Swords a success.</p>
             </div>
-            <div class="team-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1100px; margin: 0 auto;">
-                <style>
-                    .team-card { width: 100% !important; max-width: 100% !important; }
-                    .team-photo { width: 100% !important; height: 320px !important; object-fit: cover !important; }
-                </style>
-                <div class="team-card animate-on-scroll">
-                    <img src="image+(2).jpg" alt="Jake Felkai" class="team-photo">
-                    <div class="team-info">
+
+            <div class="team-grid-6">
+
+                <div class="team-card-6 animate-on-scroll">
+                    <img src="image+(2).jpg" alt="Jake Felkai" class="team-photo-6">
+                    <div class="team-info-6">
                         <h3>Jake Felkai</h3>
-                        <p class="team-role">Main Team</p>
+                        <p class="team-role-6">Main Team</p>
+                        <p class="team-funfact-6">Fun fact placeholder about Jake goes here.</p>
                     </div>
                 </div>
-                <div class="team-card animate-on-scroll">
-                    <img src="image+(1).jpg" alt="Andia Zand" class="team-photo">
-                    <div class="team-info">
+
+                <div class="team-card-6 animate-on-scroll">
+                    <img src="image+(1).jpg" alt="Andia Zand" class="team-photo-6">
+                    <div class="team-info-6">
                         <h3>Andia Zand</h3>
-                        <p class="team-role">Main Team</p>
+                        <p class="team-role-6">Main Team</p>
+                        <p class="team-funfact-6">Fun fact placeholder about Andia goes here.</p>
                     </div>
                 </div>
-                <div class="team-card animate-on-scroll">
-                    <img src="Screenshot+2026-02-12+164631.jpg" alt="Nathan Fihrer" class="team-photo">
-                    <div class="team-info">
+
+                <div class="team-card-6 animate-on-scroll">
+                    <img src="Screenshot+2026-02-12+164631.jpg" alt="Nathan Fihrer" class="team-photo-6">
+                    <div class="team-info-6">
                         <h3>Nathan Fihrer</h3>
-                        <p class="team-role">Main Team</p>
+                        <p class="team-role-6">Main Team</p>
+                        <p class="team-funfact-6">Fun fact placeholder about Nathan goes here.</p>
                     </div>
                 </div>
-                <div class="team-card animate-on-scroll">
-                    <img src="image.jpg" alt="Fargol Moini Zandi" class="team-photo">
-                    <div class="team-info">
+
+                <div class="team-card-6 animate-on-scroll">
+                    <img src="image.jpg" alt="Fargol Moini Zandi" class="team-photo-6">
+                    <div class="team-info-6">
                         <h3>Fargol Moini Zandi</h3>
-                        <p class="team-role">Main Team</p>
+                        <p class="team-role-6">Main Team</p>
+                        <p class="team-funfact-6">Fun fact placeholder about Fargol goes here.</p>
                     </div>
                 </div>
-                <div class="team-card animate-on-scroll">
-                    <img src="Crimson Team Photos .png" alt="Jee Hu Choi" class="team-photo">
-                    <div class="team-info">
+
+                <div class="team-card-6 animate-on-scroll">
+                    <img src="Crimson Team Photos .png" alt="Jee Hu Choi" class="team-photo-6">
+                    <div class="team-info-6">
                         <h3>Jee Hu Choi</h3>
-                        <p class="team-role">Main Team</p>
+                        <p class="team-role-6">Main Team</p>
+                        <p class="team-funfact-6">Fun fact placeholder about Jee Hu goes here.</p>
                     </div>
                 </div>
-                <div class="team-card animate-on-scroll">
-                    <img src="Nicholas.png" alt="Nicholas Dirlis" class="team-photo">
-                    <div class="team-info">
+
+                <div class="team-card-6 animate-on-scroll">
+                    <img src="Nicholas.png" alt="Nicholas Dirlis" class="team-photo-6">
+                    <div class="team-info-6">
                         <h3>Nicholas Dirlis</h3>
-                        <p class="team-role">Main Team</p>
+                        <p class="team-role-6">Main Team</p>
+                        <p class="team-funfact-6">Fun fact placeholder about Nicholas goes here.</p>
                     </div>
                 </div>
-                <div class="team-card animate-on-scroll">
-                    <img src="Norah.png" alt="Norah Anderson" class="team-photo">
-                    <div class="team-info">
+
+                <div class="team-card-6 animate-on-scroll">
+                    <img src="Norah.png" alt="Norah Anderson" class="team-photo-6">
+                    <div class="team-info-6">
                         <h3>Norah Anderson</h3>
-                        <p class="team-role">Sub Member</p>
+                        <p class="team-role-6">Sub Member</p>
+                        <p class="team-funfact-6">Fun fact placeholder about Norah goes here.</p>
                     </div>
                 </div>
-                <div class="team-card animate-on-scroll">
-                    <img src="Annika.png" alt="Annika Sapra" class="team-photo">
-                    <div class="team-info">
+
+                <div class="team-card-6 animate-on-scroll">
+                    <img src="Annika.png" alt="Annika Sapra" class="team-photo-6">
+                    <div class="team-info-6">
                         <h3>Annika Sapra</h3>
-                        <p class="team-role">Sub Member</p>
+                        <p class="team-role-6">Sub Member</p>
+                        <p class="team-funfact-6">Fun fact placeholder about Annika goes here.</p>
                     </div>
                 </div>
-                <div class="team-card animate-on-scroll">
-                    <img src="Aaryaa.png" alt="Aaryaa Sheth" class="team-photo">
-                    <div class="team-info">
+
+                <div class="team-card-6 animate-on-scroll">
+                    <img src="Aaryaa.png" alt="Aaryaa Sheth" class="team-photo-6">
+                    <div class="team-info-6">
                         <h3>Aaryaa Sheth</h3>
-                        <p class="team-role">Sub Member</p>
+                        <p class="team-role-6">Sub Member</p>
+                        <p class="team-funfact-6">Fun fact placeholder about Aaryaa goes here.</p>
                     </div>
                 </div>
-                <div class="team-card animate-on-scroll">
-                    <img src="Maia.png" alt="Maia Williams" class="team-photo">
-                    <div class="team-info">
+
+                <div class="team-card-6 animate-on-scroll">
+                    <img src="Maia.png" alt="Maia Williams" class="team-photo-6">
+                    <div class="team-info-6">
                         <h3>Maia Williams</h3>
-                        <p class="team-role">Sub Member</p>
+                        <p class="team-role-6">Sub Member</p>
+                        <p class="team-funfact-6">Fun fact placeholder about Maia goes here.</p>
                     </div>
                 </div>
-                <div class="team-card animate-on-scroll">
-                    <img src="Bridgit.png" alt="Bridgit Hayward" class="team-photo">
-                    <div class="team-info">
+
+                <div class="team-card-6 animate-on-scroll">
+                    <img src="Bridgit.png" alt="Bridgit Hayward" class="team-photo-6">
+                    <div class="team-info-6">
                         <h3>Bridgit Hayward</h3>
-                        <p class="team-role">Sub Member</p>
+                        <p class="team-role-6">Sub Member</p>
+                        <p class="team-funfact-6">Fun fact placeholder about Bridgit goes here.</p>
                     </div>
                 </div>
-                <div class="team-card animate-on-scroll">
-                    <img src="Bradley.png" alt="Bradley Wong" class="team-photo">
-                    <div class="team-info">
+
+                <div class="team-card-6 animate-on-scroll">
+                    <img src="Bradley.png" alt="Bradley Wong" class="team-photo-6">
+                    <div class="team-info-6">
                         <h3>Bradley Wong</h3>
-                        <p class="team-role">Sub Member</p>
+                        <p class="team-role-6">Sub Member</p>
+                        <p class="team-funfact-6">Fun fact placeholder about Bradley goes here.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
- 
+
     <!-- Join CTA -->
     <section class="section cta-section">
         <div class="container">
