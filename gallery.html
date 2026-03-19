@@ -7,6 +7,133 @@
     <title>Gallery | Crimson Swords Racing Team</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        /* ── Lightbox Overlay ── */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.93);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-inner {
+            position: relative;
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lightbox-img {
+            max-height: 80vh;
+            max-width: 100%;
+            object-fit: contain;
+            display: block;
+            box-shadow: 0 20px 80px rgba(0,0,0,0.8);
+        }
+
+        .lightbox-caption {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            margin-top: 16px;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        .lightbox-counter {
+            color: var(--crimson);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+
+        /* Close button */
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 24px;
+            background: none;
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            width: 44px;
+            height: 44px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            line-height: 1;
+        }
+
+        .lightbox-close:hover {
+            border-color: var(--crimson);
+            background: var(--crimson);
+        }
+
+        /* Prev / Next arrows */
+        .lightbox-prev,
+        .lightbox-next {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            border: 2px solid rgba(255,255,255,0.2);
+            color: white;
+            width: 52px;
+            height: 52px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .lightbox-prev { left: 16px; }
+        .lightbox-next { right: 16px; }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            border-color: var(--crimson);
+            background: var(--crimson);
+        }
+
+        /* Cursor hint on gallery items */
+        .gallery-item {
+            cursor: zoom-in;
+        }
+
+        /* Keyboard hint */
+        .lightbox-hint {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.3);
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 600px) {
+            .lightbox-prev { left: 6px; }
+            .lightbox-next { right: 6px; }
+            .lightbox-prev, .lightbox-next { width: 40px; height: 40px; font-size: 1.1rem; }
+        }
+    </style>
 </head>
 <body>
 
@@ -41,7 +168,7 @@
     <!-- Page Header -->
     <header class="page-header">
         <div class="container">
-            <h1>Our Gallery</span></h1>
+            <h1>Our Gallery</h1>
             <p>Moments from the team — competitions, workshops, and race days.</p>
         </div>
     </header>
@@ -50,81 +177,113 @@
     <section class="section section-dark">
         <div class="container">
             <div class="gallery-grid animate-on-scroll">
-                <div class="gallery-item gallery-large">
+
+                <div class="gallery-item gallery-large" data-caption="STEM Racing — Canadian Regional Qualifiers">
                     <img src="5b8891e7-0320-4a66-bdb9-e1668498ef68.JPEG" alt="STEM Racing Canadian Regional Qualifiers">
                     <div class="gallery-caption">STEM Racing — Canadian Regional Qualifiers</div>
                 </div>
-                <div class="gallery-item">
+
+                <div class="gallery-item" data-caption="Precision Engineering">
                     <img src="DSCF1894.JPEG" alt="Precision measurement in the workshop">
                     <div class="gallery-caption">Precision Engineering</div>
                 </div>
-                <div class="gallery-item">
+
+                <div class="gallery-item" data-caption="Precise Measurements">
                     <img src="DSCF1854.JPEG" alt="Racing cars on display">
                     <div class="gallery-caption">Precise Measurements</div>
                 </div>
-                <div class="gallery-item">
+
+                <div class="gallery-item" data-caption="Working on Weekends">
                     <img src="DSCF1918.JPEG" alt="Team member working in workshop">
                     <div class="gallery-caption">Working on Weekends</div>
                 </div>
-                <div class="gallery-item">
+
+                <div class="gallery-item" data-caption="Regionals Race Day">
                     <img src="DSCF2470.JPEG" alt="Competition racing track">
                     <div class="gallery-caption">Regionals Race Day</div>
                 </div>
-                <div class="gallery-item">
+
+                <div class="gallery-item" data-caption="Regional Presentation">
                     <img src="DSCF2475.JPEG" alt="Car body parts in workshop">
                     <div class="gallery-caption">Regional Presentation</div>
                 </div>
-                <div class="gallery-item">
+
+                <div class="gallery-item" data-caption="Our Team">
                     <img src="IMG_4013.JPEG" alt="Team presenting at competition">
                     <div class="gallery-caption">Our Team</div>
                 </div>
-                <div class="gallery-item">
+
+                <div class="gallery-item" data-caption="Practice">
                     <img src="IMG_3987.JPEG" alt="Competition event">
                     <div class="gallery-caption">Practice</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="DSCF3377.JPEG" alt="Gallery photo">
-                    <div class="gallery-caption">Track Set up</div>
+
+                <div class="gallery-item" data-caption="Track Set Up">
+                    <img src="DSCF3377.JPEG" alt="Track set up">
+                    <div class="gallery-caption">Track Set Up</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="DSCF3569.JPEG" alt="Gallery photo">
-                    <div class="gallery-caption">Track Set up</div>
+
+                <div class="gallery-item" data-caption="Track Set Up">
+                    <img src="DSCF3569.JPEG" alt="Track set up">
+                    <div class="gallery-caption">Track Set Up</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="F75C4554-F1D2-4611-B22A-DE5362FF288A.JPEG" alt="Gallery photo">
+
+                <div class="gallery-item" data-caption="InspireTech Gift">
+                    <img src="F75C4554-F1D2-4611-B22A-DE5362FF288A.JPEG" alt="InspireTech Gift">
                     <div class="gallery-caption">InspireTech Gift</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="DSCF2473.JPEG" alt="Gallery photo">
+
+                <div class="gallery-item" data-caption="Mr Wong">
+                    <img src="DSCF2473.JPEG" alt="Mr Wong">
                     <div class="gallery-caption">Mr Wong</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="C4A8EE32-7E02-4A65-A474-5827F435C613.JPEG" alt="Gallery photo">
+
+                <div class="gallery-item" data-caption="Practice">
+                    <img src="C4A8EE32-7E02-4A65-A474-5827F435C613.JPEG" alt="Practice">
                     <div class="gallery-caption">Practice</div>
                 </div>
-                <div class="gallery-item gallery-large">
-                    <img src="DSCF3539.JPEG" alt="Gallery photo">
+
+                <div class="gallery-item gallery-large" data-caption="Practice">
+                    <img src="DSCF3539.JPEG" alt="Practice">
                     <div class="gallery-caption">Practice</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="IMG_4030.JPEG" alt="Gallery photo">
+
+                <div class="gallery-item" data-caption="Photos">
+                    <img src="IMG_4030.JPEG" alt="Photos">
                     <div class="gallery-caption">Photos</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="d90146df-2dfe-440d-967a-5bd4cd49388d.JPEG" alt="Gallery photo">
+
+                <div class="gallery-item" data-caption="Regionals Introductions">
+                    <img src="d90146df-2dfe-440d-967a-5bd4cd49388d.JPEG" alt="Regionals Introductions">
                     <div class="gallery-caption">Regionals Introductions</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="36827d82-052e-417a-8db1-8eef96689d1f.JPEG" alt="Gallery photo">
+
+                <div class="gallery-item" data-caption="STEM Racing — Canadian Regional Qualifiers">
+                    <img src="36827d82-052e-417a-8db1-8eef96689d1f.JPEG" alt="STEM Racing Canadian Regional Qualifiers">
                     <div class="gallery-caption">STEM Racing — Canadian Regional Qualifiers</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="IMG_2626.JPEG" alt="Gallery photo">
-                    <div class="gallery-caption">Best Identity & Branding Award</div>
+
+                <div class="gallery-item" data-caption="Best Identity &amp; Branding Award">
+                    <img src="IMG_2626.JPEG" alt="Best Identity and Branding Award">
+                    <div class="gallery-caption">Best Identity &amp; Branding Award</div>
                 </div>
+
             </div>
         </div>
     </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&#x2715;</button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+        <div class="lightbox-inner">
+            <img class="lightbox-img" id="lightboxImg" src="" alt="">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+            <p class="lightbox-counter" id="lightboxCounter"></p>
+        </div>
+        <div class="lightbox-hint">← → arrow keys to browse &nbsp;·&nbsp; ESC to close</div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -169,13 +328,85 @@
                     <a href="mailto:nsscrimsonswords@gmail.com" style="color:var(--crimson); font-size:0.9rem;">nsscrimsonswords@gmail.com</a>
                 </div>
             </div>
-           <div class="footer-bottom">
-    <button class="dark-mode-toggle">☀ Light Mode</button>
-    <p>&copy; 2026 Crimson Swords Racing Team. All rights reserved.</p>
-</div>
+            <div class="footer-bottom">
+                <button class="dark-mode-toggle">☀ Light Mode</button>
+                <p>&copy; 2026 Crimson Swords Racing Team. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Build list of all gallery items
+        const items = Array.from(document.querySelectorAll('.gallery-item'));
+        let current = 0;
+
+        const lightbox      = document.getElementById('lightbox');
+        const lbImg         = document.getElementById('lightboxImg');
+        const lbCaption     = document.getElementById('lightboxCaption');
+        const lbCounter     = document.getElementById('lightboxCounter');
+        const lbClose       = document.getElementById('lightboxClose');
+        const lbPrev        = document.getElementById('lightboxPrev');
+        const lbNext        = document.getElementById('lightboxNext');
+
+        function openLightbox(index) {
+            current = index;
+            const item = items[current];
+            const img  = item.querySelector('img');
+            lbImg.src        = img.src;
+            lbImg.alt        = img.alt;
+            lbCaption.textContent = item.dataset.caption || '';
+            lbCounter.textContent = `${current + 1} / ${items.length}`;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function showPrev() {
+            current = (current - 1 + items.length) % items.length;
+            openLightbox(current);
+        }
+
+        function showNext() {
+            current = (current + 1) % items.length;
+            openLightbox(current);
+        }
+
+        // Attach click to each gallery item
+        items.forEach((item, i) => {
+            item.addEventListener('click', () => openLightbox(i));
+        });
+
+        lbClose.addEventListener('click', closeLightbox);
+        lbPrev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+        lbNext.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+
+        // Click backdrop to close
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape')      closeLightbox();
+            if (e.key === 'ArrowLeft')   showPrev();
+            if (e.key === 'ArrowRight')  showNext();
+        });
+
+        // Touch/swipe support
+        let touchStartX = 0;
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].clientX;
+        }, { passive: true });
+        lightbox.addEventListener('touchend', (e) => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) diff > 0 ? showNext() : showPrev();
+        }, { passive: true });
+    </script>
 </body>
 </html>
