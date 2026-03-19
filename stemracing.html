@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn everything about STEM Racing — what it is, how competitions work, our awards, and upcoming events.">
+    <title>STEM Racing | Crimson Swords Racing Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ── Page-specific styles ── */
+
+        /* ── HERO ── */
+        .stem-hero {
+            background: var(--black);
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stem-hero::before {
+            content: '';
+            position: absolute;
+            top: -100px; right: -200px;
+            width: 700px; height: 700px;
+            background: radial-gradient(circle, rgba(178,34,34,0.18) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .stem-hero::after {
+            content: 'F1';
+            position: absolute;
+            right: -20px; top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 28rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.025);
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .stem-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .stem-hero-eyebrow {
+            display: inline-block;
+            background: var(--crimson);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            margin-bottom: 28px;
+        }
+
+        .stem-hero h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 7rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+            color: var(--white);
+            margin-bottom: 32px;
+        }
+
+        .stem-hero h1 span {
+            color: var(--crimson);
+        }
+
+        .stem-hero-desc {
+            color: rgba(255,255,255,0.65);
+            font-size: 1.1rem;
+            max-width: 560px;
+            line-height: 1.9;
+            margin-bottom: 48px;
+        }
+
+        .stem-hero-stats {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .stem-stat {
+            border-left: 3px solid var(--crimson);
+            padding-left: 20px;
+        }
+
+        .stem-stat-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .stem-stat-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gray);
+            margin-top: 4px;
+        }
+
+        /* ── WHAT IS STEM RACING ── */
+        .what-section {
+            background: var(--off-white);
+            padding: 120px 0;
+        }
+
+        .what-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .what-text h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            color: var(--black);
+            line-height: 1;
+            margin-bottom: 28px;
+        }
+
+        .what-text h2 span { color: var(--crimson); }
+
+        .what-text p {
+            color: var(--gray);
+            font-size: 1.05rem;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .what-text a.btn { margin-top: 16px; }
+
+        .what-pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+        }
+
+        .pillar {
+            background: var(--white);
+            padding: 36px 28px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .pillar::before {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 3px;
+            background: var(--crimson);
+            transition: width 0.4s ease;
+        }
+
+        .pillar:hover::before { width: 100%; }
+        .pillar:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+
+        .pillar-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .pillar h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .pillar p {
+            color: var(--gray);
+            font-size: 0.88rem;
+            line-height: 1.7;
+        }
+
+        /* ── HOW COMPETITIONS WORK ── */
+        .comp-section {
+            background: var(--black);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comp-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(178,34,34,0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .comp-section .section-label {
+            display: inline-block;
+            background: rgba(178,34,34,0.15);
+            border: 1px solid rgba(178,34,34,0.3);
+            color: var(--crimson);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            margin-bottom: 24px;
+        }
+
+        .comp-section h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        .comp-section h2 span { color: var(--crimson); }
+
+        .comp-section .comp-intro {
+            color: rgba(255,255,255,0.55);
+            font-size: 1rem;
+            max-width: 540px;
+            line-height: 1.8;
+            margin-bottom: 72px;
+        }
+
+        .stages {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+            position: relative;
+        }
+
+        .stage {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            padding: 40px 28px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .stage:hover {
+            background: rgba(178,34,34,0.08);
+            border-color: rgba(178,34,34,0.3);
+            transform: translateY(-4px);
+        }
+
+        .stage-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            color: rgba(178,34,34,0.15);
+            line-height: 1;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+        }
+
+        .stage h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 12px;
+            letter-spacing: 0.02em;
+        }
+
+        .stage p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.88rem;
+            line-height: 1.75;
+        }
+
+        .stage-tag {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--crimson);
+            border: 1px solid rgba(178,34,34,0.3);
+            padding: 4px 10px;
+        }
+
+        /* judging criteria */
+        .judging {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        .judge-item {
+            text-align: center;
+            padding: 28px 16px;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: all 0.3s ease;
+        }
+
+        .judge-item:hover {
+            border-color: var(--crimson);
+            background: rgba(178,34,34,0.05);
+        }
+
+        .judge-pct {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--crimson);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .judge-name {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .judging-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+        }
+
+        /* ── AWARDS ── */
+        .awards-section {
+            background: var(--off-white);
+            padding: 120px 0;
+        }
+
+        .awards-section .section-eyebrow {
+            display: inline-block;
+            background: var(--crimson);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            margin-bottom: 24px;
+        }
+
+        .awards-section h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        .awards-section h2 span { color: var(--crimson); }
+
+        .awards-section .awards-intro {
+            color: var(--gray);
+            font-size: 1rem;
+            max-width: 520px;
+            line-height: 1.8;
+            margin-bottom: 64px;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .award-card {
+            background: var(--white);
+            padding: 40px 32px;
+            border: 1px solid rgba(0,0,0,0.06);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .award-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+        }
+
+        .award-card.gold::before    { background: linear-gradient(90deg, #c9a84c, #f0d060, #c9a84c); }
+        .award-card.silver::before  { background: linear-gradient(90deg, #888, #bbb, #888); }
+        .award-card.special::before { background: var(--crimson); }
+
+        .award-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+        }
+
+        .award-medal {
+            font-size: 2.4rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .award-event {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--crimson);
+            margin-bottom: 10px;
+        }
+
+        .award-card h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--black);
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .award-card p {
+            color: var(--gray);
+            font-size: 0.88rem;
+            line-height: 1.7;
+        }
+
+        .award-year {
+            position: absolute;
+            bottom: 20px; right: 24px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: rgba(0,0,0,0.04);
+            line-height: 1;
+        }
+
+        /* ── UPCOMING EVENTS ── */
+        .events-section {
+            background: var(--black);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .events-section::after {
+            content: '';
+            position: absolute;
+            bottom: -200px; right: -200px;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(178,34,34,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .events-section .section-label {
+            display: inline-block;
+            background: rgba(178,34,34,0.15);
+            border: 1px solid rgba(178,34,34,0.3);
+            color: var(--crimson);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            margin-bottom: 24px;
+        }
+
+        .events-section h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        .events-section h2 span { color: var(--crimson); }
+
+        .events-section .events-intro {
+            color: rgba(255,255,255,0.5);
+            font-size: 1rem;
+            max-width: 500px;
+            line-height: 1.8;
+            margin-bottom: 64px;
+        }
+
+        .events-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .event-row {
+            display: grid;
+            grid-template-columns: 120px 1fr auto;
+            align-items: center;
+            gap: 40px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 32px 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-row::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 0;
+            background: var(--crimson);
+            transition: width 0.3s ease;
+        }
+
+        .event-row:hover::before { width: 4px; }
+
+        .event-row:hover {
+            background: rgba(178,34,34,0.06);
+            border-color: rgba(178,34,34,0.2);
+        }
+
+        .event-date-block {
+            text-align: center;
+        }
+
+        .event-month {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--crimson);
+            margin-bottom: 4px;
+        }
+
+        .event-day {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .event-info h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 6px;
+            letter-spacing: 0.02em;
+        }
+
+        .event-info p {
+            color: rgba(255,255,255,0.45);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        .event-badge {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .event-badge.nationals {
+            background: var(--crimson);
+            color: white;
+        }
+
+        .event-badge.upcoming {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.5);
+        }
+
+        .event-badge.past {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.25);
+        }
+
+        /* ── CTA ── */
+        .stem-cta {
+            background: var(--crimson);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stem-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, transparent 60%);
+        }
+
+        .stem-cta .container { position: relative; z-index: 1; }
+
+        .stem-cta h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        .stem-cta p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.05rem;
+            max-width: 480px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .stem-cta .btn-white {
+            background: white;
+            color: var(--crimson);
+            border: 2px solid white;
+            font-weight: 700;
+            padding: 16px 40px;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .stem-cta .btn-white:hover {
+            background: transparent;
+            color: white;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 1024px) {
+            .stages { grid-template-columns: repeat(2, 1fr); }
+            .judging { grid-template-columns: repeat(3, 1fr); }
+            .awards-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .stem-hero h1 { font-size: 4rem; }
+            .stem-hero::after { display: none; }
+            .what-grid { grid-template-columns: 1fr; gap: 48px; }
+            .what-pillars { grid-template-columns: 1fr 1fr; }
+            .stages { grid-template-columns: 1fr; }
+            .judging { grid-template-columns: repeat(2, 1fr); }
+            .awards-grid { grid-template-columns: 1fr; }
+            .event-row { grid-template-columns: 80px 1fr; gap: 20px; }
+            .event-badge { display: none; }
+            .stem-hero-stats { gap: 32px; }
+            .comp-section h2, .awards-section h2, .events-section h2, .what-text h2 { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 480px) {
+            .what-pillars { grid-template-columns: 1fr; }
+            .stem-hero h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ticker Bar -->
+    <div class="ticker-bar">
+        <div class="ticker-track">
+            <span> </span><span> </span><span> </span><span> </span><span> </span>
+            <span> </span><span> </span><span>  </span><span> </span><span> </span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Crimson Swords" class="logo-img">
+                <div class="logo-text">Crimson<span>Swords</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="stemracing.html" class="active">STEM Racing</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="stem-hero">
+        <div class="container">
+            <div class="animate-on-scroll">
+                <span class="stem-hero-eyebrow">The Competition</span>
+                <h1>STEM<br><span>Racing</span></h1>
+                <p class="stem-hero-desc">
+                    Where engineering meets motorsport. Students design, build, and race CO₂-powered cars — pushing the limits of physics, creativity, and teamwork on the international stage.
+                </p>
+                <div class="stem-hero-stats">
+                    <div class="stem-stat">
+                        <div class="stem-stat-num">9–19</div>
+                        <div class="stem-stat-label">Student Age Range</div>
+                    </div>
+                    <div class="stem-stat">
+                        <div class="stem-stat-num">30+</div>
+                        <div class="stem-stat-label">Countries Competing</div>
+                    </div>
+                    <div class="stem-stat">
+                        <div class="stem-stat-num">F1</div>
+                        <div class="stem-stat-label">Endorsed Program</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── WHAT IS STEM RACING ── -->
+    <section class="what-section" id="what">
+        <div class="container">
+            <div class="what-grid">
+                <div class="what-text animate-on-scroll">
+                    <h2>What is<br><span>STEM Racing?</span></h2>
+                    <p>Formerly known as F1 in Schools, STEM Racing is a global competition where teams of students aged 9–19 design, manufacture, and race miniature CO₂-powered cars. It blends real-world engineering with the prestige of Formula 1 motorsport.</p>
+                    <p>Teams work through every stage of a real engineering project: from CAD design and CNC manufacturing to branding, sponsorship, and live technical presentations — just like a professional race team.</p>
+                    <p>Endorsed by Formula 1 and run in over 30 countries, it's one of the most complete STEM challenges available to high school students anywhere in the world.</p>
+                    <a href="https://www.stemracing.ca/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top:8px;">Visit STEM Racing ↗</a>
+                </div>
+                <div class="what-pillars animate-on-scroll">
+                    <div class="pillar">
+                        <span class="pillar-icon">📐</span>
+                        <h4>CAD Design</h4>
+                        <p>Teams use professional 3D software to design aerodynamic car bodies, optimising every curve for speed.</p>
+                    </div>
+                    <div class="pillar">
+                        <span class="pillar-icon">🏭</span>
+                        <h4>Manufacturing</h4>
+                        <p>Cars are CNC-machined from a balsa wood block to fractions of a millimetre precision.</p>
+                    </div>
+                    <div class="pillar">
+                        <span class="pillar-icon">📊</span>
+                        <h4>Engineering</h4>
+                        <p>Teams analyse drag, thrust, and mass to push their car's performance to the theoretical limit.</p>
+                    </div>
+                    <div class="pillar">
+                        <span class="pillar-icon">🎨</span>
+                        <h4>Branding</h4>
+                        <p>From team identity and livery to sponsorship portfolios, marketing is a scored part of competition.</p>
+                    </div>
+                    <div class="pillar">
+                        <span class="pillar-icon">🗣️</span>
+                        <h4>Presentation</h4>
+                        <p>Teams present to a panel of industry judges, defending every design decision made.</p>
+                    </div>
+                    <div class="pillar">
+                        <span class="pillar-icon">🏁</span>
+                        <h4>Racing</h4>
+                        <p>Cars race head-to-head down a 20-metre track powered by a CO₂ cartridge, hitting speeds up to 100 km/h.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── HOW COMPETITIONS WORK ── -->
+    <section class="comp-section" id="competitions">
+        <div class="container">
+            <div class="animate-on-scroll">
+                <span class="section-label">The Process</span>
+                <h2>How Competitions<br><span>Work</span></h2>
+                <p class="comp-intro">STEM Racing competitions run in stages — from regional qualifiers all the way up to the national and world finals. Each level raises the stakes.</p>
+            </div>
+
+            <div class="stages animate-on-scroll">
+                <div class="stage">
+                    <div class="stage-num">01</div>
+                    <h4>Regional Qualifiers</h4>
+                    <p>Teams compete at the regional level against schools from their area. Top teams advance to provincials. Judged on all categories.</p>
+                    <span class="stage-tag">Completed ✓</span>
+                </div>
+                <div class="stage">
+                    <div class="stage-num">02</div>
+                    <h4>Provincial Championship</h4>
+                    <p>The best teams from across Ontario face off. This is where the top handful earn their ticket to nationals.</p>
+                    <span class="stage-tag">Completed ✓</span>
+                </div>
+                <div class="stage">
+                    <div class="stage-num">03</div>
+                    <h4>National Finals</h4>
+                    <p>Canada's elite teams compete for the national title. Winners represent Canada at the World Finals.</p>
+                    <span class="stage-tag" style="color: var(--crimson); border-color: var(--crimson); background: rgba(178,34,34,0.1);">April 2026 🔥</span>
+                </div>
+                <div class="stage">
+                    <div class="stage-num">04</div>
+                    <h4>World Finals</h4>
+                    <p>The pinnacle. Teams from 30+ countries descend on one venue to determine the best STEM Racing team on the planet.</p>
+                    <span class="stage-tag">The Dream 🌍</span>
+                </div>
+            </div>
+
+            <div class="animate-on-scroll" style="margin-top: 80px;">
+                <p class="judging-label">Judging Criteria</p>
+                <div class="judging">
+                    <div class="judge-item">
+                        <div class="judge-pct">25%</div>
+                        <div class="judge-name">Car Design</div>
+                    </div>
+                    <div class="judge-item">
+                        <div class="judge-pct">25%</div>
+                        <div class="judge-name">Portfolio</div>
+                    </div>
+                    <div class="judge-item">
+                        <div class="judge-pct">20%</div>
+                        <div class="judge-name">Verbal Presentation</div>
+                    </div>
+                    <div class="judge-item">
+                        <div class="judge-pct">20%</div>
+                        <div class="judge-name">Race Times</div>
+                    </div>
+                    <div class="judge-item">
+                        <div class="judge-pct">10%</div>
+                        <div class="judge-name">Display Pit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── AWARDS ── -->
+    <section class="awards-section" id="awards">
+        <div class="container">
+            <div class="animate-on-scroll">
+                <span class="section-eyebrow">Recognition</span>
+                <h2>Awards &<br><span>Achievements</span></h2>
+                <p class="awards-intro">What we've earned so far — and what we're racing towards. Every award reflects the team's dedication to engineering excellence.</p>
+            </div>
+
+            <div class="awards-grid animate-on-scroll">
+                <div class="award-card gold">
+                    <span class="award-medal">🥇</span>
+                    <div class="award-event">Regional Qualifiers 2026</div>
+                    <h4>Best Identity &amp; Branding</h4>
+                    <p>Recognised for outstanding team branding, livery design, and sponsor portfolio presentation.</p>
+                    <div class="award-year">26</div>
+                </div>
+                <div class="award-card silver">
+                    <span class="award-medal">🏆</span>
+                    <div class="award-event">Regional Qualifiers 2026</div>
+                    <h4>Regional Qualifier Finalists</h4>
+                    <p>Advanced past regional competition, earning a spot at the provincial and national stage.</p>
+                    <div class="award-year">26</div>
+                </div>
+                <div class="award-card special">
+                    <span class="award-medal">⚙️</span>
+                    <div class="award-event">In Progress</div>
+                    <h4>Nationals 2026</h4>
+                    <p>Competing at Canadore College, North Bay — April 10–12, 2026. We're going for gold.</p>
+                    <div class="award-year">26</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── UPCOMING EVENTS ── -->
+    <section class="events-section" id="events">
+        <div class="container">
+            <div class="animate-on-scroll">
+                <span class="section-label">Schedule</span>
+                <h2>Upcoming<br><span>Events</span></h2>
+                <p class="events-intro">Our competition calendar for the 2025–2026 season. Follow along as we race toward nationals and beyond.</p>
+            </div>
+
+            <div class="events-list animate-on-scroll">
+
+                <div class="event-row">
+                    <div class="event-date-block">
+                        <div class="event-month">Feb</div>
+                        <div class="event-day">2026</div>
+                    </div>
+                    <div class="event-info">
+                        <h4>Canadian Regional Qualifiers</h4>
+                        <p>Our first major competition of the season — where Crimson Swords earned Best Identity &amp; Branding.</p>
+                    </div>
+                    <span class="event-badge past">Completed</span>
+                </div>
+
+                <div class="event-row">
+                    <div class="event-date-block">
+                        <div class="event-month">Apr</div>
+                        <div class="event-day">10–12</div>
+                    </div>
+                    <div class="event-info">
+                        <h4>STEM Racing National Finals</h4>
+                        <p>Canadore College, North Bay, Ontario. Canada's top teams compete for the national title and a shot at Worlds.</p>
+                    </div>
+                    <span class="event-badge nationals">Nationals 🔥</span>
+                </div>
+
+                <div class="event-row">
+                    <div class="event-date-block">
+                        <div class="event-month">TBD</div>
+                        <div class="event-day">—</div>
+                    </div>
+                    <div class="event-info">
+                        <h4>STEM Racing World Finals</h4>
+                        <p>The global championship — teams from 30+ countries. Our ultimate goal for the season.</p>
+                    </div>
+                    <span class="event-badge upcoming">World Finals</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="stem-cta">
+        <div class="container">
+            <h2>Want to Support<br>the Team?</h2>
+            <p>Sponsoring Crimson Swords puts your brand in front of a passionate STEM community and helps us compete at the highest level.</p>
+            <a href="sponsors.html" class="btn-white">Become a Sponsor</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Crimson Swords</h4>
+                    <p>Northern Secondary School's premier STEM racing team, driving innovation through competitive engineering.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/crimson.swords/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=DF5JG-j0slk" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+                        </a>
+                        <a href="https://linktr.ee/nsscrimsonswords" target="_blank" rel="noopener noreferrer" aria-label="Linktree">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7.953 15.066c-.08.163-.08.324-.08.486.08.517.528.897 1.052.816l2.35-.4v4.234c0 .58.47 1.05 1.05 1.05h1.05c.58 0 1.05-.47 1.05-1.05v-4.234l2.35.4c.524.08.972-.3 1.052-.816 0-.162 0-.323-.08-.486l-4.523-8.89a1.05 1.05 0 0 0-1.848 0zm4.097-12.43L9.5 6.42l2.55.44 2.55-.44-2.55-3.784zm2.846 3.496 2.55 3.784-2.55-.44v.001l-2.55.44 2.55-3.785z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="stemracing.html">STEM Racing</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/crimson.swords/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://linktr.ee/nsscrimsonswords" target="_blank" rel="noopener noreferrer">Linktree</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=DF5JG-j0slk" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Northern Secondary School</p>
+                    <a href="mailto:nsscrimsonswords@gmail.com" style="color:var(--crimson); font-size:0.9rem;">nsscrimsonswords@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Crimson Swords Racing Team. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
