@@ -255,6 +255,252 @@
         </div>
     </section>
 
+    <!-- Timeline Section -->
+<section class="section section-dark" id="timeline" style="overflow: hidden;">
+    <div class="container">
+        <div class="section-title animate-on-scroll" style="margin-bottom: 80px;">
+            <h2>Our <span>Journey</span></h2>
+            <p style="color: var(--gray); font-size: 1rem; margin-top: 12px;">Every milestone that brought us here.</p>
+        </div>
+    </div>
+
+    <div class="cs-timeline">
+
+        <!-- Event 1 -->
+        <div class="cs-tl-item cs-tl-left animate-on-scroll">
+            <div class="cs-tl-content">
+                <div class="cs-tl-img-wrap">
+                    <img src="DSCF1854.JPEG" alt="Team formation">
+                </div>
+                <div class="cs-tl-text">
+                    <span class="cs-tl-date">Fall 2024</span>
+                    <h3>The Team Forms</h3>
+                    <p>A group of Northern Secondary students come together with one goal — build, race, and innovate. The Crimson Swords are born.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="cs-tl-item cs-tl-right animate-on-scroll">
+            <div class="cs-tl-content">
+                <div class="cs-tl-img-wrap">
+                    <img src="DSCF1894.JPEG" alt="Workshop engineering">
+                </div>
+                <div class="cs-tl-text">
+                    <span class="cs-tl-date">Winter 2024</span>
+                    <h3>Workshop Begins</h3>
+                    <p>Weekends spent in the workshop — measuring, designing, and building. Precision engineering becomes the team's identity.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="cs-tl-item cs-tl-left animate-on-scroll">
+            <div class="cs-tl-content">
+                <div class="cs-tl-img-wrap">
+                    <img src="DSCF3539.JPEG" alt="Practice runs">
+                </div>
+                <div class="cs-tl-text">
+                    <span class="cs-tl-date">Early 2025</span>
+                    <h3>Practice & Testing</h3>
+                    <p>Hours of practice runs on the track — refining the car's setup, strategy, and the team's pit communication before competition season.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="cs-tl-item cs-tl-right animate-on-scroll">
+            <div class="cs-tl-content">
+                <div class="cs-tl-img-wrap">
+                    <img src="DSCF2470.JPEG" alt="Regional competition">
+                </div>
+                <div class="cs-tl-text">
+                    <span class="cs-tl-date">Spring 2025</span>
+                    <h3>Canadian Regional Qualifiers</h3>
+                    <p>Our first major competition. The team takes to the track at the Canadian STEM Racing Regional Qualifiers — and makes their mark.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="cs-tl-item cs-tl-left animate-on-scroll">
+            <div class="cs-tl-content">
+                <div class="cs-tl-img-wrap">
+                    <img src="IMG_2626.JPEG" alt="Best Identity and Branding Award">
+                </div>
+                <div class="cs-tl-text">
+                    <span class="cs-tl-date">Spring 2025</span>
+                    <h3>Best Identity &amp; Branding Award 🏆</h3>
+                    <p>Recognised for outstanding team branding and presentation. Our identity — the Crimson Swords — earns its first official accolade.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 6 -->
+        <div class="cs-tl-item cs-tl-right animate-on-scroll">
+            <div class="cs-tl-content">
+                <div class="cs-tl-img-wrap">
+                    <img src="5b8891e7-0320-4a66-bdb9-e1668498ef68.JPEG" alt="Looking ahead">
+                </div>
+                <div class="cs-tl-text">
+                    <span class="cs-tl-date">2026 →</span>
+                    <h3>The Road Ahead</h3>
+                    <p>With a stronger team, new sponsors, and lessons learned, we're preparing for our most ambitious season yet. The story continues.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+/* ── Timeline ── */
+.cs-timeline {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+}
+
+/* Central spine */
+.cs-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--crimson) 8%, var(--crimson) 92%, transparent);
+    opacity: 0.35;
+}
+
+.cs-tl-item {
+    display: flex;
+    width: 50%;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+/* Dot on spine */
+.cs-tl-item::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    width: 12px;
+    height: 12px;
+    background: var(--crimson);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--crimson) 20%, transparent);
+    z-index: 1;
+}
+
+.cs-tl-left {
+    padding-right: 60px;
+    justify-content: flex-end;
+}
+
+.cs-tl-left::before {
+    right: -6px;
+}
+
+.cs-tl-right {
+    margin-left: 50%;
+    padding-left: 60px;
+    justify-content: flex-start;
+}
+
+.cs-tl-right::before {
+    left: -6px;
+}
+
+.cs-tl-content {
+    width: 100%;
+    max-width: 440px;
+    background: color-mix(in srgb, var(--black, #0a0a0a) 60%, transparent);
+    border: 1px solid rgba(255,255,255,0.07);
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.cs-tl-content:hover {
+    border-color: rgba(185, 28, 28, 0.4);
+    transform: translateY(-4px);
+}
+
+.cs-tl-img-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.cs-tl-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s ease;
+    filter: saturate(0.85);
+}
+
+.cs-tl-content:hover .cs-tl-img-wrap img {
+    transform: scale(1.04);
+    filter: saturate(1);
+}
+
+.cs-tl-text {
+    padding: 24px 28px 28px;
+}
+
+.cs-tl-date {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--crimson);
+    margin-bottom: 10px;
+}
+
+.cs-tl-text h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white, #fff);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.cs-tl-text p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Mobile — single column */
+@media (max-width: 768px) {
+    .cs-timeline::before { left: 20px; }
+
+    .cs-tl-item,
+    .cs-tl-right {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 52px;
+        padding-right: 0;
+        justify-content: flex-start;
+    }
+
+    .cs-tl-left::before,
+    .cs-tl-right::before {
+        left: 14px;
+        right: auto;
+    }
+
+    .cs-tl-content { max-width: 100%; }
+}
+</style>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
