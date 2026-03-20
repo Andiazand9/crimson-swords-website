@@ -360,71 +360,76 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
-    <script>
-        // Build list of all gallery items
-        const items = Array.from(document.querySelectorAll('.gallery-item'));
-        let current = 0;
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="script.js"></script>
+<script>
+    const items = Array.from(document.querySelectorAll('.gallery-item'));
+    let current = 0;
 
-        const lightbox      = document.getElementById('lightbox');
-        const lbImg         = document.getElementById('lightboxImg');
-        const lbCaption     = document.getElementById('lightboxCaption');
-        const lbCounter     = document.getElementById('lightboxCounter');
-        const lbClose       = document.getElementById('lightboxClose');
-        const lbPrev        = document.getElementById('lightboxPrev');
-        const lbNext        = document.getElementById('lightboxNext');
+    const lightbox  = document.getElementById('lightbox');
+    const lbImg     = document.getElementById('lightboxImg');
+    const lbCaption = document.getElementById('lightboxCaption');
+    const lbCounter = document.getElementById('lightboxCounter');
+    const lbClose   = document.getElementById('lightboxClose');
+    const lbPrev    = document.getElementById('lightboxPrev');
+    const lbNext    = document.getElementById('lightboxNext');
 
-        function openLightbox(index) {
-            current = index;
-            const item = items[current];
-            const img  = item.querySelector('img');
-            lbImg.src        = img.src;
-            lbImg.alt        = img.alt;
-            lbCaption.textContent = item.dataset.caption || '';
-            lbCounter.textContent = `${current + 1} / ${items.length}`;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
+    function openLightbox(index) {
+        current = index;
+        const item = items[current];
+        const img  = item.querySelector('img');
+        lbImg.src     = img.src;
+        lbImg.alt     = img.alt;
+        lbCaption.textContent = item.dataset.caption || '';
+        lbCounter.textContent = `${current + 1} / ${items.length}`;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function showPrev() {
+        current = (current - 1 + items.length) % items.length;
+        openLightbox(current);
+    }
+
+    function showNext() {
+        current = (current + 1) % items.length;
+        openLightbox(current);
+    }
+
+    items.forEach((item, i) => {
+        item.addEventListener('click', () => openLightbox(i));
+    });
+
+    lbClose.addEventListener('click', closeLightbox);
+    lbPrev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+    lbNext.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape')     closeLightbox();
+        if (e.key === 'ArrowLeft')  showPrev();
+        if (e.key === 'ArrowRight') showNext();
+    });
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    lightbox.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e) => {
+        const delta = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) > 50) {
+            delta < 0 ? showNext() : showPrev();
         }
-
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function showPrev() {
-            current = (current - 1 + items.length) % items.length;
-            openLightbox(current);
-        }
-
-        function showNext() {
-            current = (current + 1) % items.length;
-            openLightbox(current);
-        }
-
-        // Attach click to each gallery item
-        items.forEach((item, i) => {
-            item.addEventListener('click', () => openLightbox(i));
-        });
-
-        lbClose.addEventListener('click', closeLightbox);
-        lbPrev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
-        lbNext.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
-
-        // Click backdrop to close
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) closeLightbox();
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (!lightbox.classList.contains('active')) return;
-            if (e.key === 'Escape')      closeLightbox();
-            if (e.key === 'ArrowLeft')   showPrev();
-            if (e.key === 'ArrowRight')  showNext();
-        });
-
-        // Touch/swipe support
-        let touchStartX = 0;
-        lightbox.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].clientX;
-        }, { passive: true });
+    }, { passive: true });
+</script>
