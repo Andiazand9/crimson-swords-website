@@ -66,14 +66,16 @@ function initMobileMenu() {
     if (!hamburger || !navLinks) return;
 
     hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
+        const isOpen = hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', function() {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
+            document.body.style.overflow = '';
         });
     });
 
@@ -81,6 +83,7 @@ function initMobileMenu() {
         if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
+            document.body.style.overflow = '';
         }
     });
 }
