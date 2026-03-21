@@ -1251,7 +1251,7 @@ img.team-photo {
         left: 0;
         right: 0;
         bottom: 0;
-        background: var(--black);
+         background: #0a0a0a;
         border-left: 4px solid var(--crimson);
         flex-direction: column;
         padding: 120px 40px 60px;
@@ -1261,6 +1261,13 @@ img.team-photo {
         z-index: 1050;
         justify-content: flex-start;
     }
+   :root.light-mode .nav-links {
+    background: #0a0a0a;
+}
+
+:root.light-mode .nav-links a {
+    color: #ffffff !important;
+}
 
     .nav-links.active {
         transform: translateX(0);
