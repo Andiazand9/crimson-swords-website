@@ -297,6 +297,131 @@
     </div>
 </section>
 
+    <!-- Photo Submission Section -->
+<section class="cs-submit-section">
+    <div class="cs-submit-bg"></div>
+    <div class="container cs-submit-inner">
+        <div class="cs-submit-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="12" width="40" height="30" rx="4" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="27" r="8" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="27" r="3.5" fill="currentColor"/>
+                <path d="M16 12L19 7h10l3 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="37" cy="18" r="2" fill="currentColor"/>
+            </svg>
+        </div>
+        <div class="cs-submit-text">
+            <p class="cs-submit-eyebrow">Community Gallery</p>
+            <h2 class="cs-submit-heading">Got a shot of us?</h2>
+            <p class="cs-submit-sub">If you captured a moment at one of our events — a race, a pit stop, anything — we'd love to feature it. Send your photos and we'll add the best ones here.</p>
+        </div>
+        <a href="mailto:nsscrimsonswords@gmail.com?subject=Photo%20Submission%20%E2%80%94%20Crimson%20Swords&body=Hi%2C%20I%20have%20a%20photo%20to%20share!" class="cs-submit-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Submit Your Photo
+        </a>
+    </div>
+</section>
+
+<style>
+.cs-submit-section {
+    position: relative;
+    padding: 90px 0;
+    overflow: hidden;
+    background: var(--black);
+}
+
+.cs-submit-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 80% at 0% 50%, rgba(185,28,28,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 100% 50%, rgba(185,28,28,0.06) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.cs-submit-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.cs-submit-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    color: var(--crimson);
+    opacity: 0.85;
+}
+
+.cs-submit-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.cs-submit-text {
+    flex: 1;
+    min-width: 240px;
+}
+
+.cs-submit-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--crimson);
+    margin-bottom: 10px;
+}
+
+.cs-submit-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 14px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+}
+
+.cs-submit-sub {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    max-width: 520px;
+    margin: 0;
+}
+
+.cs-submit-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--crimson);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.cs-submit-btn:hover {
+    background: var(--crimson-dark, #991b1b);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .cs-submit-inner { flex-direction: column; text-align: center; align-items: center; }
+    .cs-submit-sub { max-width: 100%; }
+    .cs-submit-heading { font-size: 2.2rem; }
+}
+</style>
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
         <button class="lightbox-close" id="lightboxClose" aria-label="Close">&#x2715;</button>
