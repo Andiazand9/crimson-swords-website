@@ -1564,3 +1564,36 @@ img.team-photo {
     border-color: var(--crimson);
     color: var(--crimson);
 }
+/* ========================================
+   Mobile Nav Scroll Fix
+   ======================================== */
+@media (max-width: 768px) {
+    .navbar.scrolled {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+    }
+
+    .navbar.scrolled::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: calc(var(--ticker-height) + var(--navbar-height));
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        z-index: 999;
+        pointer-events: none;
+    }
+
+    .nav-links {
+        z-index: 1060 !important;
+    }
+
+    .hamburger {
+        z-index: 1070 !important;
+    }
+}
