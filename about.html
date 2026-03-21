@@ -514,6 +514,107 @@
 }
 </style>
 
+    <!-- Sponsor Ticker -->
+<div class="cs-sponsor-ticker">
+    <div class="cs-ticker-label">Our Partners</div>
+    <div class="cs-ticker-mask">
+        <div class="cs-ticker-track">
+            <!-- logos duplicated for seamless loop -->
+            <a href="https://www.northern.on.ca" target="_blank" class="cs-ticker-item"><img src="nss-logo.jpeg" alt="Northern Secondary School"></a>
+            <a href="https://www.lexusonthepark.com" target="_blank" class="cs-ticker-item"><img src="lexus logo.png" alt="Lexus On the Park" style="filter:brightness(0) invert(1);"></a>
+            <a href="https://nssf.ca/" target="_blank" class="cs-ticker-item"><img src="NSSF_logo.png" alt="NSS Foundation"></a>
+            <a href="#" target="_blank" class="cs-ticker-item"><img src="logos/andia-logo.png" alt="Sponsor" style="filter:brightness(0) invert(1);"></a>
+            <a href="https://www.ontario.ca/page/specialist-high-skills-major" target="_blank" class="cs-ticker-item"><img src="SHSM-LOGO.png" alt="SHSM" style="filter:brightness(0) invert(1);"></a>
+            <a href="https://www.tdsb.on.ca/" target="_blank" class="cs-ticker-item"><img src="tdsb-logo.png" alt="TDSB" style="filter:brightness(0) invert(1);"></a>
+            <!-- duplicate for seamless loop -->
+            <a href="https://www.northern.on.ca" target="_blank" class="cs-ticker-item"><img src="nss-logo.jpeg" alt="Northern Secondary School"></a>
+            <a href="https://www.lexusonthepark.com" target="_blank" class="cs-ticker-item"><img src="lexus logo.png" alt="Lexus On the Park" style="filter:brightness(0) invert(1);"></a>
+            <a href="https://nssf.ca/" target="_blank" class="cs-ticker-item"><img src="NSSF_logo.png" alt="NSS Foundation"></a>
+            <a href="#" target="_blank" class="cs-ticker-item"><img src="logos/andia-logo.png" alt="Sponsor" style="filter:brightness(0) invert(1);"></a>
+            <a href="https://www.ontario.ca/page/specialist-high-skills-major" target="_blank" class="cs-ticker-item"><img src="SHSM-LOGO.png" alt="SHSM" style="filter:brightness(0) invert(1);"></a>
+            <a href="https://www.tdsb.on.ca/" target="_blank" class="cs-ticker-item"><img src="tdsb-logo.png" alt="TDSB" style="filter:brightness(0) invert(1);"></a>
+        </div>
+    </div>
+</div>
+
+<style>
+.cs-sponsor-ticker {
+    display: flex;
+    align-items: center;
+    background: #0d0d0d;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 0;
+    overflow: hidden;
+    height: 72px;
+}
+
+.cs-ticker-label {
+    flex-shrink: 0;
+    padding: 0 28px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    border-right: 1px solid rgba(255,255,255,0.08);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.cs-ticker-mask {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+/* fade edges */
+.cs-ticker-mask::before,
+.cs-ticker-mask::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 2;
+    pointer-events: none;
+}
+.cs-ticker-mask::before { left: 0; background: linear-gradient(to right, #0d0d0d, transparent); }
+.cs-ticker-mask::after  { right: 0; background: linear-gradient(to left, #0d0d0d, transparent); }
+
+@keyframes cs-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.cs-ticker-track {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    width: max-content;
+    animation: cs-scroll 28s linear infinite;
+    padding: 0 32px;
+}
+
+.cs-ticker-track:hover { animation-play-state: paused; }
+
+.cs-ticker-item {
+    display: flex;
+    align-items: center;
+    opacity: 0.45;
+    transition: opacity 0.3s;
+    text-decoration: none;
+}
+.cs-ticker-item:hover { opacity: 1; }
+
+.cs-ticker-item img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+</style>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
