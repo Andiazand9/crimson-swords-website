@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://crimsonswords.ca/</loc>
+        <priority>1.0</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://crimsonswords.ca/about.html</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://crimsonswords.ca/gallery.html</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://crimsonswords.ca/sponsors.html</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://crimsonswords.ca/contact.html</loc>
+        <priority>0.6</priority>
+        <changefreq>yearly</changefreq>
+    </url>
+</urlset>
+```
+
+---
