@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crimson Swords sustainability initiatives — how we build responsibly for our environment and community.">
+    <title>Sustainability | Crimson Swords Racing Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- SEO -->
+    <meta name="keywords" content="STEM racing, Crimson Swords, sustainability, Northern Secondary School, community, environment">
+    <meta name="author" content="Crimson Swords Racing Team">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Sustainability | Crimson Swords Racing Team">
+    <meta property="og:description" content="How Crimson Swords builds sustainably — for the planet and the community.">
+    <meta property="og:image" content="https://crimsonswords.ca/5b8891e7-0320-4a66-bdb9-e1668498ef68.JPEG">
+    <meta property="og:url" content="https://crimsonswords.ca/sustainability.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://crimsonswords.ca/sustainability.html">
+
+    <style>
+        :root {
+            --crimson: #b91c1c;
+            --crimson-dark: #991b1b;
+            --black: #0d0d0d;
+            --white: #ffffff;
+            --gray: #6b7280;
+            --light-gray: #f3f4f6;
+        }
+
+        /* ── Page Header ── */
+        .page-header {
+            background: var(--black);
+            padding: 120px 0 60px;
+            text-align: center;
+            border-bottom: 2px solid var(--crimson);
+        }
+        .page-header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            letter-spacing: 0.04em;
+            margin-bottom: 16px;
+        }
+        .page-header h1 span { color: var(--crimson); }
+        .page-header p {
+            color: rgba(255,255,255,0.5);
+            font-size: 1.05rem;
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ── Intro strip ── */
+        .sustain-intro {
+            background: var(--crimson);
+            padding: 28px 0;
+        }
+        .sustain-intro .container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .sustain-intro p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+        .sustain-intro-label {
+            flex-shrink: 0;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+            letter-spacing: 0.1em;
+            white-space: nowrap;
+            padding-right: 20px;
+            border-right: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* ── Section shared ── */
+        .section { padding: 80px 0; }
+        .section-dark { background: #111; }
+        .section-light { background: #f8f8f8; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── Pillar cards ── */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2px;
+            margin-top: 56px;
+        }
+        .pillar-card {
+            background: #1a1a1a;
+            padding: 44px 36px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s ease;
+        }
+        .pillar-card:hover { background: #222; }
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        .pillar-card:hover::before { transform: scaleX(1); }
+        .pillar-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(185,28,28,0.15);
+            line-height: 1;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .pillar-icon {
+            width: 44px;
+            height: 44px;
+            margin-bottom: 20px;
+            color: var(--crimson);
+        }
+        .pillar-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 14px;
+            letter-spacing: 0.04em;
+        }
+        .pillar-card p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.92rem;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        /* ── Section heading ── */
+        .section-label {
+            display: inline-block;
+            background: var(--crimson);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            margin-bottom: 20px;
+        }
+        .section-heading {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+        .section-heading span { color: var(--crimson); }
+
+        /* ── Photo + text split rows ── */
+        .split-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            align-items: stretch;
+            margin-bottom: 2px;
+        }
+        .split-row.reverse { direction: rtl; }
+        .split-row.reverse > * { direction: ltr; }
+
+        .split-img {
+            position: relative;
+            overflow: hidden;
+            min-height: 380px;
+        }
+        .split-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+        .split-row:hover .split-img img { transform: scale(1.03); }
+        .split-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(185,28,28,0.25) 0%, transparent 60%);
+        }
+
+        .split-content {
+            background: #1a1a1a;
+            padding: 56px 52px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .split-content .section-label { margin-bottom: 16px; }
+        .split-content h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 18px;
+            line-height: 1.1;
+        }
+        .split-content p {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+        .split-content p:last-child { margin-bottom: 0; }
+
+        /* ── Community sponsors grid ── */
+        .community-section { background: var(--black); }
+        .community-intro {
+            max-width: 700px;
+            margin-bottom: 56px;
+        }
+        .community-intro p {
+            color: rgba(255,255,255,0.5);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .sponsors-sustain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2px;
+        }
+        .sponsor-sustain-card {
+            background: #181818;
+            padding: 36px 32px;
+            border-top: 3px solid transparent;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .sponsor-sustain-card:hover {
+            border-color: var(--crimson);
+            background: #1f1f1f;
+        }
+        .sponsor-sustain-card h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            letter-spacing: 0.06em;
+            margin-bottom: 10px;
+        }
+        .sponsor-sustain-card p {
+            color: rgba(255,255,255,0.45);
+            font-size: 0.88rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+        .sponsor-tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--crimson);
+            margin-bottom: 12px;
+        }
+
+        /* ── Stats bar ── */
+        .stats-bar {
+            background: var(--crimson);
+            padding: 52px 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 0;
+            text-align: center;
+        }
+        .stat-item {
+            padding: 24px 20px;
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+        .stat-item:last-child { border-right: none; }
+        .stat-num {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            margin-top: 8px;
+            display: block;
+        }
+
+        /* ── CTA ── */
+        .cta-sustain {
+            background: var(--black);
+            padding: 90px 0;
+            text-align: center;
+            border-top: 2px solid #1f1f1f;
+        }
+        .cta-sustain h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+        }
+        .cta-sustain h2 span { color: var(--crimson); }
+        .cta-sustain p {
+            color: rgba(255,255,255,0.5);
+            font-size: 1rem;
+            line-height: 1.75;
+            max-width: 520px;
+            margin: 0 auto 40px;
+        }
+
+        /* ── Buttons ── */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+        .btn-primary { background: var(--crimson); color: #fff; }
+        .btn-primary:hover { background: var(--crimson-dark); transform: translateY(-2px); }
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.25);
+        }
+        .btn-secondary:hover {
+            border-color: var(--crimson);
+            color: var(--crimson);
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+
+        /* ── Sponsor ticker (copied from site) ── */
+        .cs-sponsor-ticker {
+            display: flex; align-items: center;
+            background: #0d0d0d;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            overflow: hidden; height: 72px;
+        }
+        .cs-ticker-label {
+            flex-shrink: 0; padding: 0 28px;
+            font-size: 0.65rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            color: rgba(255,255,255,0.25);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            height: 100%; display: flex; align-items: center; white-space: nowrap;
+        }
+        .cs-ticker-mask { flex: 1; overflow: hidden; position: relative; }
+        .cs-ticker-mask::before,
+        .cs-ticker-mask::after {
+            content: ''; position: absolute; top: 0; bottom: 0; width: 60px; z-index: 2; pointer-events: none;
+        }
+        .cs-ticker-mask::before { left: 0; background: linear-gradient(to right, #0d0d0d, transparent); }
+        .cs-ticker-mask::after  { right: 0; background: linear-gradient(to left, #0d0d0d, transparent); }
+        @keyframes cs-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        .cs-ticker-track {
+            display: flex; align-items: center; gap: 64px;
+            width: max-content;
+            animation: cs-scroll 40s linear infinite;
+            padding: 0 32px;
+        }
+        .cs-ticker-track:hover { animation-play-state: paused; }
+        .cs-ticker-item {
+            display: flex; align-items: center;
+            opacity: 0.45; transition: opacity 0.3s; text-decoration: none;
+        }
+        .cs-ticker-item:hover { opacity: 1; }
+        .cs-ticker-item img { height: 36px; width: auto; object-fit: contain; display: block; }
+
+        /* ── Footer ── */
+        .footer {
+            background: #0a0a0a;
+            padding: 60px 0 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+        .footer-section h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        .footer-section p { color: rgba(255,255,255,0.4); font-size: 0.88rem; line-height: 1.7; }
+        .footer-section ul { list-style: none; padding: 0; margin: 0; }
+        .footer-section ul li { margin-bottom: 8px; }
+        .footer-section ul li a {
+            color: rgba(255,255,255,0.4); font-size: 0.88rem;
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-section ul li a:hover { color: var(--crimson); }
+        .footer-social { display: flex; gap: 12px; margin-top: 16px; }
+        .footer-social a {
+            color: rgba(255,255,255,0.4);
+            transition: color 0.2s;
+        }
+        .footer-social a:hover { color: var(--crimson); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-bottom p { color: rgba(255,255,255,0.25); font-size: 0.8rem; }
+
+        /* ── Nav ── */
+        .navbar {
+            position: fixed; top: 40px; left: 0; right: 0; z-index: 1000;
+            padding: 0;
+        }
+        .navbar.scrolled {
+            top: 0;
+            background: rgba(10,10,10,0.97);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            backdrop-filter: blur(12px);
+        }
+        .navbar .container {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 70px;
+        }
+        .logo {
+            display: flex; align-items: center; gap: 10px;
+            text-decoration: none;
+        }
+        .logo-img { height: 36px; width: auto; }
+        .logo-text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.06em;
+            color: var(--white);
+        }
+        .logo-text span { color: var(--crimson); }
+        .nav-links { display: flex; list-style: none; gap: 32px; margin: 0; padding: 0; }
+        .nav-links a {
+            color: rgba(255,255,255,0.6); text-decoration: none;
+            font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em;
+            text-transform: uppercase; transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--crimson); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); }
+
+        /* ── Ticker bar ── */
+        .ticker-bar {
+            height: 40px; background: var(--crimson);
+            display: flex; align-items: center; overflow: hidden;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .split-row { grid-template-columns: 1fr; }
+            .split-row.reverse { direction: ltr; }
+            .split-img { min-height: 260px; }
+            .split-content { padding: 36px 28px; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+        }
+        @media (max-width: 600px) {
+            .footer-content { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ticker Bar -->
+    <div class="ticker-bar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Crimson Swords" class="logo-img">
+                <div class="logo-text">Crimson<span>Swords</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="sustainability.html" class="active">Sustainability</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Built to <span>Last.</span></h1>
+            <p>Sustainability isn't a checkbox — it's how we build, who we partner with, and how we give back to the community that supports us.</p>
+        </div>
+    </header>
+
+    <!-- Intro strip -->
+    <div class="sustain-intro">
+        <div class="container">
+            <span class="sustain-intro-label">Our Commitment</span>
+            <p>From CO₂-cartridge propulsion to community-rooted sponsorships, every decision we make is guided by a simple question: <strong>does this leave things better than we found them?</strong></p>
+        </div>
+    </div>
+
+    <!-- Pillars -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-label">Three Pillars</div>
+            <h2 class="section-heading" style="color:var(--white);">How We <span>Stay Sustainable</span></h2>
+            <div class="pillars-grid">
+
+                <div class="pillar-card">
+                    <div class="pillar-number">01</div>
+                    <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <h3>Environmental Design</h3>
+                    <p>Our CO₂-powered cars produce zero combustion waste on race day. We design for minimal material waste — every foam offcut is repurposed or recycled, and our CNC toolpaths are optimised to reduce scrap. We choose reusable materials wherever the competition rules allow.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-number">02</div>
+                    <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="17" cy="21" r="1"/><circle cx="9" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    <h3>Community Commerce</h3>
+                    <p>Every sponsor on our roster is either local, school-affiliated, or student-facing. We deliberately seek partners whose values align with education and community reinvestment — not just brands writing cheques. When they support us, their dollars stay in the community.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-number">03</div>
+                    <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <h3>Knowledge Transfer</h3>
+                    <p>The team doesn't end at graduation. Senior members mentor younger students, our build processes are documented each year, and we open our workshops to curious students from other grades. The knowledge we build is a resource — not a secret.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats bar -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-num">0</span>
+                    <span class="stat-label">Combustion Waste on Race Day</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">8+</span>
+                    <span class="stat-label">Community-Rooted Sponsors</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Student-Run Team</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">1</span>
+                    <span class="stat-label">School. One community.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Split rows — Environmental -->
+    <section class="section" style="background:#111; padding:0;">
+
+        <div class="split-row">
+            <div class="split-img">
+                <img src="DSCF1854.JPEG" alt="Precision measurement in the workshop">
+                <div class="split-img-overlay"></div>
+            </div>
+            <div class="split-content">
+                <span class="section-label">Environment</span>
+                <h3>Designing for Less Waste</h3>
+                <p>Every car body starts as a block of foam. Our CAD and CNC workflow is planned to maximise yield from each block — offcuts are measured, catalogued, and reused for prototyping or smaller components.</p>
+                <p>We document material usage each season so the next team can learn from our decisions, reduce overspend, and cut down on waste from the start.</p>
+            </div>
+        </div>
+
+        <div class="split-row reverse">
+            <div class="split-img">
+                <img src="DSCF2470.JPEG" alt="Race day competition">
+                <div class="split-img-overlay"></div>
+            </div>
+            <div class="split-content">
+                <span class="section-label">Race Day</span>
+                <h3>Clean by Design</h3>
+                <p>CO₂-propelled racing means no fuel, no exhaust, and no combustion byproducts during competition. The cartridges we use are standard, regulated, and contain only compressed gas.</p>
+                <p>At competitions, we pack out what we pack in — including all packaging, scraps, and used materials. Leaving a clean pit is part of our team culture.</p>
+            </div>
+        </div>
+
+        <div class="split-row">
+            <div class="split-img">
+                <img src="DSCF1918.JPEG" alt="Team member working on weekend">
+                <div class="split-img-overlay"></div>
+            </div>
+            <div class="split-content">
+                <span class="section-label">People</span>
+                <h3>Sustainable for Students</h3>
+                <p>Burnout isn't sustainable either. We structure our season with defined roles, realistic workloads, and protected time so students can balance academics, personal life, and the team.</p>
+                <p>A team that takes care of its people builds better cars — and produces better engineers, designers, and leaders for the future.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Community sponsors -->
+    <section class="section community-section">
+        <div class="container">
+            <div class="section-label">Community</div>
+            <h2 class="section-heading" style="color:var(--white);">Sponsors Who <span>Mean Something</span></h2>
+            <div class="community-intro">
+                <p>We don't chase logos. Our partners were chosen because they are embedded in the same communities our students come from — local businesses, school institutions, and organisations that invest in youth.</p>
+            </div>
+
+            <div class="sponsors-sustain-grid">
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Education</span>
+                    <h4>Northern Secondary School</h4>
+                    <p>Our home base. NSS provides us with space, resources, and institutional backing — investing directly in its own students' engineering futures.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Education</span>
+                    <h4>TDSB</h4>
+                    <p>The Toronto District School Board's support signals a district-wide commitment to hands-on STEM education that extends beyond the classroom.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Student Government</span>
+                    <h4>NSS Student Council</h4>
+                    <p>Peers funding peers. The student council's support comes directly from the student body — the most community-rooted sponsorship possible.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Foundation</span>
+                    <h4>NSS Foundation</h4>
+                    <p>A foundation committed to enriching student experience at Northern — channelling community donations back into programs like ours.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Skills Program</span>
+                    <h4>SHSM</h4>
+                    <p>The Specialist High Skills Major program connects what we do in competition directly to real sector pathways — giving our work lasting career relevance.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Local Business</span>
+                    <h4>Lexus On The Park</h4>
+                    <p>A local dealership that sees the value in supporting the next generation of automotive and engineering talent right in its own neighbourhood.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Local Business</span>
+                    <h4>EDO Japan</h4>
+                    <p>A Canadian restaurant brand with deep local ties, backing student achievement in the communities where their restaurants operate.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Local Business</span>
+                    <h4>Chipotle</h4>
+                    <p>Supporting student-led initiatives and community programming as part of a broader commitment to the neighbourhoods they serve.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo moment — team photo -->
+    <section style="background:#0d0d0d; padding: 0;">
+        <div style="position:relative; height: 420px; overflow:hidden;">
+            <img src="IMG_4013.JPEG" alt="The Crimson Swords team"
+                 style="width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block; opacity:0.6;">
+            <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; padding: 24px;">
+                <div style="display:inline-block; background:var(--crimson); color:white; font-size:0.68rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:6px 14px; margin-bottom:20px;">The Foundation</div>
+                <h2 style="font-family:'Oswald',sans-serif; font-size:clamp(2rem,5vw,4rem); font-weight:700; text-transform:uppercase; color:#fff; letter-spacing:0.02em; margin:0; line-height:1.05; max-width:700px;">
+                    A sustainable team<br>starts with <span style="color:var(--crimson);">people.</span>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-sustain">
+        <div class="container">
+            <h2>Build Something <span>With Us</span></h2>
+            <p>If your organisation shares our values — supporting youth, community investment, and responsible engineering — we'd love to talk about a partnership.</p>
+            <div class="hero-buttons">
+                <a href="sponsors.html" class="btn btn-primary">Become a Sponsor</a>
+                <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsor Ticker -->
+    <div class="cs-sponsor-ticker">
+        <div class="cs-ticker-label">Our Partners</div>
+        <div class="cs-ticker-mask">
+            <div class="cs-ticker-track">
+                <a href="https://schoolweb.tdsb.on.ca/northernss/" target="_blank" class="cs-ticker-item"><img src="2nss-logo.png" alt="Northern Secondary School"></a>
+                <a href="https://www.lexusonthepark.com" target="_blank" class="cs-ticker-item"><img src="lexus logo.png" alt="Lexus On the Park" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://www.ontario.ca/page/specialist-high-skills-major" target="_blank" class="cs-ticker-item"><img src="SHSM-LOGO.png" alt="SHSM" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://www.edorestaurants.com/" target="_blank" class="cs-ticker-item"><img src="EDO-logo.png" alt="EDO" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://nsscouncil.com/" target="_blank" class="cs-ticker-item"><img src="NSSSC.png" alt="NSSSC"></a>
+                <a href="https://nssf.ca/" target="_blank" class="cs-ticker-item"><img src="NSSF_logo.png" alt="NSS Foundation"></a>
+                <a href="https://www.tdsb.on.ca/" target="_blank" class="cs-ticker-item"><img src="tdsb-logo.png" alt="TDSB" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://www.chipotle.ca/" target="_blank" class="cs-ticker-item"><img src="chipotle-logo.png" alt="Chipotle" style="filter:brightness(0) invert(1);"></a>
+                <!-- duplicate -->
+                <a href="https://schoolweb.tdsb.on.ca/northernss/" target="_blank" class="cs-ticker-item"><img src="2nss-logo.png" alt="Northern Secondary School"></a>
+                <a href="https://www.lexusonthepark.com" target="_blank" class="cs-ticker-item"><img src="lexus logo.png" alt="Lexus On the Park" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://www.ontario.ca/page/specialist-high-skills-major" target="_blank" class="cs-ticker-item"><img src="SHSM-LOGO.png" alt="SHSM" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://www.edorestaurants.com/" target="_blank" class="cs-ticker-item"><img src="EDO-logo.png" alt="EDO" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://nsscouncil.com/" target="_blank" class="cs-ticker-item"><img src="NSSSC.png" alt="NSSSC"></a>
+                <a href="https://nssf.ca/" target="_blank" class="cs-ticker-item"><img src="NSSF_logo.png" alt="NSS Foundation"></a>
+                <a href="https://www.tdsb.on.ca/" target="_blank" class="cs-ticker-item"><img src="tdsb-logo.png" alt="TDSB" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://www.chipotle.ca/" target="_blank" class="cs-ticker-item"><img src="chipotle-logo.png" alt="Chipotle" style="filter:brightness(0) invert(1);"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Crimson Swords</h4>
+                    <p>Northern Secondary School's premier STEM racing team.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/crimson.swords/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@CrimsonSwords" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+                        </a>
+                        <a href="https://linktr.ee/nsscrimsonswords" target="_blank" rel="noopener noreferrer" aria-label="Linktree">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7.953 15.066c-.08.163-.08.324-.08.486.08.517.528.897 1.052.816l2.35-.4v4.234c0 .58.47 1.05 1.05 1.05h1.05c.58 0 1.05-.47 1.05-1.05v-4.234l2.35.4c.524.08.972-.3 1.052-.816 0-.162 0-.323-.08-.486l-4.523-8.89a1.05 1.05 0 0 0-1.848 0zm4.097-12.43L9.5 6.42l2.55.44 2.55-.44-2.55-3.784zm2.846 3.496 2.55 3.784-2.55-.44v.001l-2.55.44 2.55-3.785z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/crimson.swords/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://linktr.ee/nsscrimsonswords" target="_blank" rel="noopener noreferrer">Linktree</a></li>
+                        <li><a href="https://www.youtube.com/@CrimsonSwords" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Northern Secondary School</p>
+                    <a href="mailto:nsscrimsonswords@gmail.com" style="color:var(--crimson); font-size:0.9rem;">nsscrimsonswords@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Crimson Swords Racing Team. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crimson Swords sustainability initiatives — how we build responsibly for our environment and community.">
+    <title>Sustainability | Crimson Swords Racing Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- SEO -->
+    <meta name="keywords" content="STEM racing, Crimson Swords, sustainability, Northern Secondary School, community, environment">
+    <meta name="author" content="Crimson Swords Racing Team">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Sustainability | Crimson Swords Racing Team">
+    <meta property="og:description" content="How Crimson Swords builds sustainably — for the planet and the community.">
+    <meta property="og:image" content="https://crimsonswords.ca/5b8891e7-0320-4a66-bdb9-e1668498ef68.JPEG">
+    <meta property="og:url" content="https://crimsonswords.ca/sustainability.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://crimsonswords.ca/sustainability.html">
+
+    <style>
+        :root {
+            --crimson: #b91c1c;
+            --crimson-dark: #991b1b;
+            --black: #0d0d0d;
+            --white: #ffffff;
+            --gray: #6b7280;
+            --light-gray: #f3f4f6;
+        }
+
+        /* ── Page Header ── */
+        .page-header {
+            background: var(--black);
+            padding: 120px 0 60px;
+            text-align: center;
+            border-bottom: 2px solid var(--crimson);
+        }
+        .page-header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            letter-spacing: 0.04em;
+            margin-bottom: 16px;
+        }
+        .page-header h1 span { color: var(--crimson); }
+        .page-header p {
+            color: rgba(255,255,255,0.5);
+            font-size: 1.05rem;
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ── Intro strip ── */
+        .sustain-intro {
+            background: var(--crimson);
+            padding: 28px 0;
+        }
+        .sustain-intro .container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .sustain-intro p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+        .sustain-intro-label {
+            flex-shrink: 0;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+            letter-spacing: 0.1em;
+            white-space: nowrap;
+            padding-right: 20px;
+            border-right: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* ── Section shared ── */
+        .section { padding: 80px 0; }
+        .section-dark { background: #111; }
+        .section-light { background: #f8f8f8; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── Pillar cards ── */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2px;
+            margin-top: 56px;
+        }
+        .pillar-card {
+            background: #1a1a1a;
+            padding: 44px 36px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s ease;
+        }
+        .pillar-card:hover { background: #222; }
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--crimson);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        .pillar-card:hover::before { transform: scaleX(1); }
+        .pillar-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(185,28,28,0.15);
+            line-height: 1;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .pillar-icon {
+            width: 44px;
+            height: 44px;
+            margin-bottom: 20px;
+            color: var(--crimson);
+        }
+        .pillar-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 14px;
+            letter-spacing: 0.04em;
+        }
+        .pillar-card p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.92rem;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        /* ── Section heading ── */
+        .section-label {
+            display: inline-block;
+            background: var(--crimson);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            margin-bottom: 20px;
+        }
+        .section-heading {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+        .section-heading span { color: var(--crimson); }
+
+        /* ── Photo + text split rows ── */
+        .split-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            align-items: stretch;
+            margin-bottom: 2px;
+        }
+        .split-row.reverse { direction: rtl; }
+        .split-row.reverse > * { direction: ltr; }
+
+        .split-img {
+            position: relative;
+            overflow: hidden;
+            min-height: 380px;
+        }
+        .split-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+        .split-row:hover .split-img img { transform: scale(1.03); }
+        .split-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(185,28,28,0.25) 0%, transparent 60%);
+        }
+
+        .split-content {
+            background: #1a1a1a;
+            padding: 56px 52px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .split-content .section-label { margin-bottom: 16px; }
+        .split-content h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 18px;
+            line-height: 1.1;
+        }
+        .split-content p {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+        .split-content p:last-child { margin-bottom: 0; }
+
+        /* ── Community sponsors grid ── */
+        .community-section { background: var(--black); }
+        .community-intro {
+            max-width: 700px;
+            margin-bottom: 56px;
+        }
+        .community-intro p {
+            color: rgba(255,255,255,0.5);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .sponsors-sustain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2px;
+        }
+        .sponsor-sustain-card {
+            background: #181818;
+            padding: 36px 32px;
+            border-top: 3px solid transparent;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .sponsor-sustain-card:hover {
+            border-color: var(--crimson);
+            background: #1f1f1f;
+        }
+        .sponsor-sustain-card h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            letter-spacing: 0.06em;
+            margin-bottom: 10px;
+        }
+        .sponsor-sustain-card p {
+            color: rgba(255,255,255,0.45);
+            font-size: 0.88rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+        .sponsor-tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--crimson);
+            margin-bottom: 12px;
+        }
+
+        /* ── Stats bar ── */
+        .stats-bar {
+            background: var(--crimson);
+            padding: 52px 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 0;
+            text-align: center;
+        }
+        .stat-item {
+            padding: 24px 20px;
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+        .stat-item:last-child { border-right: none; }
+        .stat-num {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            margin-top: 8px;
+            display: block;
+        }
+
+        /* ── CTA ── */
+        .cta-sustain {
+            background: var(--black);
+            padding: 90px 0;
+            text-align: center;
+            border-top: 2px solid #1f1f1f;
+        }
+        .cta-sustain h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+        }
+        .cta-sustain h2 span { color: var(--crimson); }
+        .cta-sustain p {
+            color: rgba(255,255,255,0.5);
+            font-size: 1rem;
+            line-height: 1.75;
+            max-width: 520px;
+            margin: 0 auto 40px;
+        }
+
+        /* ── Buttons ── */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+        .btn-primary { background: var(--crimson); color: #fff; }
+        .btn-primary:hover { background: var(--crimson-dark); transform: translateY(-2px); }
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.25);
+        }
+        .btn-secondary:hover {
+            border-color: var(--crimson);
+            color: var(--crimson);
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+
+        /* ── Sponsor ticker (copied from site) ── */
+        .cs-sponsor-ticker {
+            display: flex; align-items: center;
+            background: #0d0d0d;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            overflow: hidden; height: 72px;
+        }
+        .cs-ticker-label {
+            flex-shrink: 0; padding: 0 28px;
+            font-size: 0.65rem; font-weight: 700;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            color: rgba(255,255,255,0.25);
+            border-right: 1px solid rgba(255,255,255,0.08);
+            height: 100%; display: flex; align-items: center; white-space: nowrap;
+        }
+        .cs-ticker-mask { flex: 1; overflow: hidden; position: relative; }
+        .cs-ticker-mask::before,
+        .cs-ticker-mask::after {
+            content: ''; position: absolute; top: 0; bottom: 0; width: 60px; z-index: 2; pointer-events: none;
+        }
+        .cs-ticker-mask::before { left: 0; background: linear-gradient(to right, #0d0d0d, transparent); }
+        .cs-ticker-mask::after  { right: 0; background: linear-gradient(to left, #0d0d0d, transparent); }
+        @keyframes cs-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        .cs-ticker-track {
+            display: flex; align-items: center; gap: 64px;
+            width: max-content;
+            animation: cs-scroll 40s linear infinite;
+            padding: 0 32px;
+        }
+        .cs-ticker-track:hover { animation-play-state: paused; }
+        .cs-ticker-item {
+            display: flex; align-items: center;
+            opacity: 0.45; transition: opacity 0.3s; text-decoration: none;
+        }
+        .cs-ticker-item:hover { opacity: 1; }
+        .cs-ticker-item img { height: 36px; width: auto; object-fit: contain; display: block; }
+
+        /* ── Footer ── */
+        .footer {
+            background: #0a0a0a;
+            padding: 60px 0 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+        .footer-section h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        .footer-section p { color: rgba(255,255,255,0.4); font-size: 0.88rem; line-height: 1.7; }
+        .footer-section ul { list-style: none; padding: 0; margin: 0; }
+        .footer-section ul li { margin-bottom: 8px; }
+        .footer-section ul li a {
+            color: rgba(255,255,255,0.4); font-size: 0.88rem;
+            text-decoration: none; transition: color 0.2s;
+        }
+        .footer-section ul li a:hover { color: var(--crimson); }
+        .footer-social { display: flex; gap: 12px; margin-top: 16px; }
+        .footer-social a {
+            color: rgba(255,255,255,0.4);
+            transition: color 0.2s;
+        }
+        .footer-social a:hover { color: var(--crimson); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-bottom p { color: rgba(255,255,255,0.25); font-size: 0.8rem; }
+
+        /* ── Nav ── */
+        .navbar {
+            position: fixed; top: 40px; left: 0; right: 0; z-index: 1000;
+            padding: 0;
+        }
+        .navbar.scrolled {
+            top: 0;
+            background: rgba(10,10,10,0.97);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            backdrop-filter: blur(12px);
+        }
+        .navbar .container {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 70px;
+        }
+        .logo {
+            display: flex; align-items: center; gap: 10px;
+            text-decoration: none;
+        }
+        .logo-img { height: 36px; width: auto; }
+        .logo-text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.06em;
+            color: var(--white);
+        }
+        .logo-text span { color: var(--crimson); }
+        .nav-links { display: flex; list-style: none; gap: 32px; margin: 0; padding: 0; }
+        .nav-links a {
+            color: rgba(255,255,255,0.6); text-decoration: none;
+            font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em;
+            text-transform: uppercase; transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--crimson); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); }
+
+        /* ── Ticker bar ── */
+        .ticker-bar {
+            height: 40px; background: var(--crimson);
+            display: flex; align-items: center; overflow: hidden;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .split-row { grid-template-columns: 1fr; }
+            .split-row.reverse { direction: ltr; }
+            .split-img { min-height: 260px; }
+            .split-content { padding: 36px 28px; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+        }
+        @media (max-width: 600px) {
+            .footer-content { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ticker Bar -->
+    <div class="ticker-bar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Crimson Swords" class="logo-img">
+                <div class="logo-text">Crimson<span>Swords</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="sustainability.html" class="active">Sustainability</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Built to <span>Last.</span></h1>
+            <p>Sustainability isn't a checkbox — it's how we build, who we partner with, and how we give back to the community that supports us.</p>
+        </div>
+    </header>
+
+    <!-- Intro strip -->
+    <div class="sustain-intro">
+        <div class="container">
+            <span class="sustain-intro-label">Our Commitment</span>
+            <p>From CO₂-cartridge propulsion to community-rooted sponsorships, every decision we make is guided by a simple question: <strong>does this leave things better than we found them?</strong></p>
+        </div>
+    </div>
+
+    <!-- Pillars -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-label">Three Pillars</div>
+            <h2 class="section-heading" style="color:var(--white);">How We <span>Stay Sustainable</span></h2>
+            <div class="pillars-grid">
+
+                <div class="pillar-card">
+                    <div class="pillar-number">01</div>
+                    <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <h3>Environmental Design</h3>
+                    <p>Our CO₂-powered cars produce zero combustion waste on race day. We design for minimal material waste — every foam offcut is repurposed or recycled, and our CNC toolpaths are optimised to reduce scrap. We choose reusable materials wherever the competition rules allow.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-number">02</div>
+                    <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="17" cy="21" r="1"/><circle cx="9" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    <h3>Community Commerce</h3>
+                    <p>Every sponsor on our roster is either local, school-affiliated, or student-facing. We deliberately seek partners whose values align with education and community reinvestment — not just brands writing cheques. When they support us, their dollars stay in the community.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-number">03</div>
+                    <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <h3>Knowledge Transfer</h3>
+                    <p>The team doesn't end at graduation. Senior members mentor younger students, our build processes are documented each year, and we open our workshops to curious students from other grades. The knowledge we build is a resource — not a secret.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats bar -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-num">0</span>
+                    <span class="stat-label">Combustion Waste on Race Day</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">8+</span>
+                    <span class="stat-label">Community-Rooted Sponsors</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Student-Run Team</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">1</span>
+                    <span class="stat-label">School. One community.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Split rows — Environmental -->
+    <section class="section" style="background:#111; padding:0;">
+
+        <div class="split-row">
+            <div class="split-img">
+                <img src="DSCF1854.JPEG" alt="Precision measurement in the workshop">
+                <div class="split-img-overlay"></div>
+            </div>
+            <div class="split-content">
+                <span class="section-label">Environment</span>
+                <h3>Designing for Less Waste</h3>
+                <p>Every car body starts as a block of foam. Our CAD and CNC workflow is planned to maximise yield from each block — offcuts are measured, catalogued, and reused for prototyping or smaller components.</p>
+                <p>We document material usage each season so the next team can learn from our decisions, reduce overspend, and cut down on waste from the start.</p>
+            </div>
+        </div>
+
+        <div class="split-row reverse">
+            <div class="split-img">
+                <img src="DSCF2470.JPEG" alt="Race day competition">
+                <div class="split-img-overlay"></div>
+            </div>
+            <div class="split-content">
+                <span class="section-label">Race Day</span>
+                <h3>Clean by Design</h3>
+                <p>CO₂-propelled racing means no fuel, no exhaust, and no combustion byproducts during competition. The cartridges we use are standard, regulated, and contain only compressed gas.</p>
+                <p>At competitions, we pack out what we pack in — including all packaging, scraps, and used materials. Leaving a clean pit is part of our team culture.</p>
+            </div>
+        </div>
+
+        <div class="split-row">
+            <div class="split-img">
+                <img src="DSCF1918.JPEG" alt="Team member working on weekend">
+                <div class="split-img-overlay"></div>
+            </div>
+            <div class="split-content">
+                <span class="section-label">People</span>
+                <h3>Sustainable for Students</h3>
+                <p>Burnout isn't sustainable either. We structure our season with defined roles, realistic workloads, and protected time so students can balance academics, personal life, and the team.</p>
+                <p>A team that takes care of its people builds better cars — and produces better engineers, designers, and leaders for the future.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Community sponsors -->
+    <section class="section community-section">
+        <div class="container">
+            <div class="section-label">Community</div>
+            <h2 class="section-heading" style="color:var(--white);">Sponsors Who <span>Mean Something</span></h2>
+            <div class="community-intro">
+                <p>We don't chase logos. Our partners were chosen because they are embedded in the same communities our students come from — local businesses, school institutions, and organisations that invest in youth.</p>
+            </div>
+
+            <div class="sponsors-sustain-grid">
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Education</span>
+                    <h4>Northern Secondary School</h4>
+                    <p>Our home base. NSS provides us with space, resources, and institutional backing — investing directly in its own students' engineering futures.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Education</span>
+                    <h4>TDSB</h4>
+                    <p>The Toronto District School Board's support signals a district-wide commitment to hands-on STEM education that extends beyond the classroom.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Student Government</span>
+                    <h4>NSS Student Council</h4>
+                    <p>Peers funding peers. The student council's support comes directly from the student body — the most community-rooted sponsorship possible.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Foundation</span>
+                    <h4>NSS Foundation</h4>
+                    <p>A foundation committed to enriching student experience at Northern — channelling community donations back into programs like ours.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Skills Program</span>
+                    <h4>SHSM</h4>
+                    <p>The Specialist High Skills Major program connects what we do in competition directly to real sector pathways — giving our work lasting career relevance.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Local Business</span>
+                    <h4>Lexus On The Park</h4>
+                    <p>A local dealership that sees the value in supporting the next generation of automotive and engineering talent right in its own neighbourhood.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Local Business</span>
+                    <h4>EDO Japan</h4>
+                    <p>A Canadian restaurant brand with deep local ties, backing student achievement in the communities where their restaurants operate.</p>
+                </div>
+
+                <div class="sponsor-sustain-card">
+                    <span class="sponsor-tag">Local Business</span>
+                    <h4>Chipotle</h4>
+                    <p>Supporting student-led initiatives and community programming as part of a broader commitment to the neighbourhoods they serve.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo moment — team photo -->
+    <section style="background:#0d0d0d; padding: 0;">
+        <div style="position:relative; height: 420px; overflow:hidden;">
+            <img src="IMG_4013.JPEG" alt="The Crimson Swords team"
+                 style="width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block; opacity:0.6;">
+            <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; padding: 24px;">
+                <div style="display:inline-block; background:var(--crimson); color:white; font-size:0.68rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:6px 14px; margin-bottom:20px;">The Foundation</div>
+                <h2 style="font-family:'Oswald',sans-serif; font-size:clamp(2rem,5vw,4rem); font-weight:700; text-transform:uppercase; color:#fff; letter-spacing:0.02em; margin:0; line-height:1.05; max-width:700px;">
+                    A sustainable team<br>starts with <span style="color:var(--crimson);">people.</span>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-sustain">
+        <div class="container">
+            <h2>Build Something <span>With Us</span></h2>
+            <p>If your organisation shares our values — supporting youth, community investment, and responsible engineering — we'd love to talk about a partnership.</p>
+            <div class="hero-buttons">
+                <a href="sponsors.html" class="btn btn-primary">Become a Sponsor</a>
+                <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsor Ticker -->
+    <div class="cs-sponsor-ticker">
+        <div class="cs-ticker-label">Our Partners</div>
+        <div class="cs-ticker-mask">
+            <div class="cs-ticker-track">
+                <a href="https://schoolweb.tdsb.on.ca/northernss/" target="_blank" class="cs-ticker-item"><img src="2nss-logo.png" alt="Northern Secondary School"></a>
+                <a href="https://www.lexusonthepark.com" target="_blank" class="cs-ticker-item"><img src="lexus logo.png" alt="Lexus On the Park" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://www.ontario.ca/page/specialist-high-skills-major" target="_blank" class="cs-ticker-item"><img src="SHSM-LOGO.png" alt="SHSM" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://www.edorestaurants.com/" target="_blank" class="cs-ticker-item"><img src="EDO-logo.png" alt="EDO" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://nsscouncil.com/" target="_blank" class="cs-ticker-item"><img src="NSSSC.png" alt="NSSSC"></a>
+                <a href="https://nssf.ca/" target="_blank" class="cs-ticker-item"><img src="NSSF_logo.png" alt="NSS Foundation"></a>
+                <a href="https://www.tdsb.on.ca/" target="_blank" class="cs-ticker-item"><img src="tdsb-logo.png" alt="TDSB" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://www.chipotle.ca/" target="_blank" class="cs-ticker-item"><img src="chipotle-logo.png" alt="Chipotle" style="filter:brightness(0) invert(1);"></a>
+                <!-- duplicate -->
+                <a href="https://schoolweb.tdsb.on.ca/northernss/" target="_blank" class="cs-ticker-item"><img src="2nss-logo.png" alt="Northern Secondary School"></a>
+                <a href="https://www.lexusonthepark.com" target="_blank" class="cs-ticker-item"><img src="lexus logo.png" alt="Lexus On the Park" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://www.ontario.ca/page/specialist-high-skills-major" target="_blank" class="cs-ticker-item"><img src="SHSM-LOGO.png" alt="SHSM" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://www.edorestaurants.com/" target="_blank" class="cs-ticker-item"><img src="EDO-logo.png" alt="EDO" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://nsscouncil.com/" target="_blank" class="cs-ticker-item"><img src="NSSSC.png" alt="NSSSC"></a>
+                <a href="https://nssf.ca/" target="_blank" class="cs-ticker-item"><img src="NSSF_logo.png" alt="NSS Foundation"></a>
+                <a href="https://www.tdsb.on.ca/" target="_blank" class="cs-ticker-item"><img src="tdsb-logo.png" alt="TDSB" style="filter:brightness(0) invert(1);"></a>
+                <a href="https://www.chipotle.ca/" target="_blank" class="cs-ticker-item"><img src="chipotle-logo.png" alt="Chipotle" style="filter:brightness(0) invert(1);"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Crimson Swords</h4>
+                    <p>Northern Secondary School's premier STEM racing team.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/crimson.swords/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@CrimsonSwords" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+                        </a>
+                        <a href="https://linktr.ee/nsscrimsonswords" target="_blank" rel="noopener noreferrer" aria-label="Linktree">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7.953 15.066c-.08.163-.08.324-.08.486.08.517.528.897 1.052.816l2.35-.4v4.234c0 .58.47 1.05 1.05 1.05h1.05c.58 0 1.05-.47 1.05-1.05v-4.234l2.35.4c.524.08.972-.3 1.052-.816 0-.162 0-.323-.08-.486l-4.523-8.89a1.05 1.05 0 0 0-1.848 0zm4.097-12.43L9.5 6.42l2.55.44 2.55-.44-2.55-3.784zm2.846 3.496 2.55 3.784-2.55-.44v.001l-2.55.44 2.55-3.785z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/crimson.swords/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://linktr.ee/nsscrimsonswords" target="_blank" rel="noopener noreferrer">Linktree</a></li>
+                        <li><a href="https://www.youtube.com/@CrimsonSwords" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Northern Secondary School</p>
+                    <a href="mailto:nsscrimsonswords@gmail.com" style="color:var(--crimson); font-size:0.9rem;">nsscrimsonswords@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Crimson Swords Racing Team. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
